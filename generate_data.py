@@ -414,8 +414,8 @@ def simulate_delivery(
             "is_wicket": True, "wicket_type": wt,
             "fielder_name": (
                 random.choice(fielding_pool).name
-                if fielding_pool and wt in ["caught", "run out"]
-                else (f"Fielder_{random.randint(1,9)}" if wt in ["caught", "run out"] else None)
+                if fielding_pool and wt in ["caught", "run out", "stumped"]
+                else None
             )
         }
 
