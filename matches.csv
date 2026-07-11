@@ -1,0 +1,89 @@
+match_id,tournament_name,format,gender,age_group,match_date,venue,city,team1,team2,toss_winner,toss_decision,match_winner,win_margin,win_type,season
+1,Ranji Trophy,FirstClass,male,senior,2024-10-01,Wardha District Ground,Wardha,Wardha XI,Buldhana XI,Buldhana XI,field,Buldhana XI,167,runs,2024-25
+2,Ranji Trophy,FirstClass,male,senior,2024-10-04,Vidarbha Cricket Association Ground,Nagpur,Chandrapur XI,Wardha XI,Chandrapur XI,field,Wardha XI,49,wickets,2024-25
+3,Ranji Trophy,FirstClass,male,senior,2024-10-07,Wardha District Ground,Wardha,Chandrapur XI,Akola XI,Chandrapur XI,bat,Akola XI,138,innings,2024-25
+4,Ranji Trophy,FirstClass,male,senior,2024-10-10,VCA Stadium Jamtha,Nagpur,Chandrapur XI,Yavatmal XI,Chandrapur XI,bat,draw,161,innings,2024-25
+5,Ranji Trophy,FirstClass,male,senior,2024-10-13,Akola Cricket Ground,Akola,Bhandara XI,Wardha XI,Bhandara XI,field,Wardha XI,123,innings,2024-25
+6,Ranji Trophy,FirstClass,male,senior,2024-10-16,Amravati Cricket Ground,Amravati,Gondia XI,Yavatmal XI,Gondia XI,field,draw,146,wickets,2024-25
+7,Ranji Trophy,FirstClass,male,senior,2024-10-19,Chandrapur Sports Complex,Chandrapur,Yavatmal XI,Nagpur XI,Nagpur XI,field,Nagpur XI,77,innings,2024-25
+8,Ranji Trophy,FirstClass,male,senior,2024-10-22,VCA Stadium Jamtha,Nagpur,Chandrapur XI,Nagpur XI,Nagpur XI,field,draw,160,runs,2024-25
+9,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-03,Chandrapur Sports Complex,Chandrapur,Wardha XI,Bhandara XI,Wardha XI,field,Wardha XI,5,wickets,2024-25
+10,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-06,Chandrapur Sports Complex,Chandrapur,Chandrapur XI,Wardha XI,Wardha XI,bat,Chandrapur XI,5,wickets,2024-25
+11,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-09,Vidarbha Cricket Association Ground,Nagpur,Amravati XI,Wardha XI,Amravati XI,bat,Wardha XI,5,wickets,2024-25
+12,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-12,Vidarbha Cricket Association Ground,Nagpur,Nagpur XI,Yavatmal XI,Nagpur XI,bat,Yavatmal XI,6,wickets,2024-25
+13,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-15,Vidarbha Cricket Association Ground,Nagpur,Amravati XI,Akola XI,Akola XI,field,Akola XI,3,wickets,2024-25
+14,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-18,Amravati Cricket Ground,Amravati,Nagpur XI,Akola XI,Nagpur XI,bat,Nagpur XI,79,runs,2024-25
+15,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-21,Vidarbha Cricket Association Ground,Nagpur,Chandrapur XI,Wardha XI,Wardha XI,bat,Wardha XI,83,runs,2024-25
+16,Syed Mushtaq Ali Trophy,T20,male,senior,2024-10-24,Amravati Cricket Ground,Amravati,Chandrapur XI,Buldhana XI,Chandrapur XI,bat,Buldhana XI,9,wickets,2024-25
+17,Vijay Hazare Trophy,ODI,male,senior,2024-10-05,Akola Cricket Ground,Akola,Akola XI,Gondia XI,Akola XI,bat,Gondia XI,5,wickets,2024-25
+18,Vijay Hazare Trophy,ODI,male,senior,2024-10-08,Wardha District Ground,Wardha,Gondia XI,Wardha XI,Gondia XI,bat,Wardha XI,4,wickets,2024-25
+19,Vijay Hazare Trophy,ODI,male,senior,2024-10-11,VCA Stadium Jamtha,Nagpur,Buldhana XI,Wardha XI,Buldhana XI,bat,Buldhana XI,33,runs,2024-25
+20,Vijay Hazare Trophy,ODI,male,senior,2024-10-14,Vidarbha Cricket Association Ground,Nagpur,Wardha XI,Nagpur XI,Wardha XI,field,Wardha XI,4,wickets,2024-25
+21,Vijay Hazare Trophy,ODI,male,senior,2024-10-17,Vidarbha Cricket Association Ground,Nagpur,Bhandara XI,Nagpur XI,Nagpur XI,field,Bhandara XI,134,runs,2024-25
+22,Vijay Hazare Trophy,ODI,male,senior,2024-10-20,Amravati Cricket Ground,Amravati,Amravati XI,Yavatmal XI,Amravati XI,bat,Amravati XI,170,runs,2024-25
+23,Vijay Hazare Trophy,ODI,male,senior,2024-10-23,Akola Cricket Ground,Akola,Wardha XI,Bhandara XI,Wardha XI,bat,Bhandara XI,4,wickets,2024-25
+24,Vijay Hazare Trophy,ODI,male,senior,2024-10-26,VCA Stadium Jamtha,Nagpur,Bhandara XI,Amravati XI,Amravati XI,bat,Bhandara XI,2,wickets,2024-25
+25,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-07,VCA Stadium Jamtha,Nagpur,Bhandara XI,Nagpur XI,Bhandara XI,bat,Bhandara XI,21,runs,2024-25
+26,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-10,Wardha District Ground,Wardha,Bhandara XI,Buldhana XI,Buldhana XI,field,draw,29,innings,2024-25
+27,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-13,Amravati Cricket Ground,Amravati,Nagpur XI,Gondia XI,Gondia XI,field,draw,16,runs,2024-25
+28,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-16,Akola Cricket Ground,Akola,Nagpur XI,Buldhana XI,Nagpur XI,field,draw,159,innings,2024-25
+29,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-19,Vidarbha Cricket Association Ground,Nagpur,Buldhana XI,Yavatmal XI,Buldhana XI,field,draw,137,innings,2024-25
+30,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-22,Wardha District Ground,Wardha,Amravati XI,Buldhana XI,Buldhana XI,bat,Amravati XI,63,runs,2024-25
+31,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-25,VCA Stadium Jamtha,Nagpur,Chandrapur XI,Wardha XI,Wardha XI,bat,Wardha XI,76,innings,2024-25
+32,Col CK Nayudu Trophy,FirstClass,male,U25,2024-10-28,Vidarbha Cricket Association Ground,Nagpur,Akola XI,Bhandara XI,Bhandara XI,bat,draw,109,runs,2024-25
+33,Vinoo Mankad Trophy,ODI,male,U19,2024-10-09,Amravati Cricket Ground,Amravati,Amravati XI,Gondia XI,Gondia XI,bat,Amravati XI,8,wickets,2024-25
+34,Vinoo Mankad Trophy,ODI,male,U19,2024-10-12,Wardha District Ground,Wardha,Wardha XI,Gondia XI,Wardha XI,field,Wardha XI,4,wickets,2024-25
+35,Vinoo Mankad Trophy,ODI,male,U19,2024-10-15,Akola Cricket Ground,Akola,Bhandara XI,Gondia XI,Bhandara XI,bat,Bhandara XI,3,runs,2024-25
+36,Vinoo Mankad Trophy,ODI,male,U19,2024-10-18,Akola Cricket Ground,Akola,Chandrapur XI,Buldhana XI,Chandrapur XI,bat,Buldhana XI,1,wickets,2024-25
+37,Vinoo Mankad Trophy,ODI,male,U19,2024-10-21,Amravati Cricket Ground,Amravati,Buldhana XI,Yavatmal XI,Buldhana XI,field,Yavatmal XI,15,runs,2024-25
+38,Vinoo Mankad Trophy,ODI,male,U19,2024-10-24,Akola Cricket Ground,Akola,Wardha XI,Gondia XI,Wardha XI,bat,Gondia XI,6,wickets,2024-25
+39,Vinoo Mankad Trophy,ODI,male,U19,2024-10-27,Amravati Cricket Ground,Amravati,Yavatmal XI,Chandrapur XI,Chandrapur XI,field,Yavatmal XI,44,runs,2024-25
+40,Vinoo Mankad Trophy,ODI,male,U19,2024-10-30,VCA Stadium Jamtha,Nagpur,Yavatmal XI,Wardha XI,Yavatmal XI,field,Wardha XI,105,runs,2024-25
+41,U19 Men T20,T20,male,U19,2024-10-11,Chandrapur Sports Complex,Chandrapur,Buldhana XI,Wardha XI,Wardha XI,bat,Wardha XI,18,runs,2024-25
+42,U19 Men T20,T20,male,U19,2024-10-14,Vidarbha Cricket Association Ground,Nagpur,Yavatmal XI,Amravati XI,Yavatmal XI,field,Yavatmal XI,4,wickets,2024-25
+43,U19 Men T20,T20,male,U19,2024-10-17,Vidarbha Cricket Association Ground,Nagpur,Wardha XI,Chandrapur XI,Wardha XI,field,Chandrapur XI,122,runs,2024-25
+44,U19 Men T20,T20,male,U19,2024-10-20,VCA Stadium Jamtha,Nagpur,Nagpur XI,Akola XI,Akola XI,field,Nagpur XI,98,runs,2024-25
+45,U19 Men T20,T20,male,U19,2024-10-23,VCA Stadium Jamtha,Nagpur,Amravati XI,Yavatmal XI,Amravati XI,field,Yavatmal XI,11,runs,2024-25
+46,U19 Men T20,T20,male,U19,2024-10-26,Akola Cricket Ground,Akola,Nagpur XI,Buldhana XI,Buldhana XI,bat,Nagpur XI,2,wickets,2024-25
+47,U19 Men T20,T20,male,U19,2024-10-29,VCA Stadium Jamtha,Nagpur,Amravati XI,Buldhana XI,Amravati XI,bat,Amravati XI,11,runs,2024-25
+48,U19 Men T20,T20,male,U19,2024-11-01,Vidarbha Cricket Association Ground,Nagpur,Gondia XI,Bhandara XI,Gondia XI,bat,Bhandara XI,5,wickets,2024-25
+49,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-13,Vidarbha Cricket Association Ground,Nagpur,Yavatmal XI,Chandrapur XI,Yavatmal XI,field,draw,183,innings,2024-25
+50,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-16,Chandrapur Sports Complex,Chandrapur,Gondia XI,Nagpur XI,Gondia XI,bat,draw,50,runs,2024-25
+51,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-19,Amravati Cricket Ground,Amravati,Bhandara XI,Wardha XI,Wardha XI,bat,Wardha XI,142,runs,2024-25
+52,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-22,Akola Cricket Ground,Akola,Wardha XI,Bhandara XI,Bhandara XI,bat,draw,52,wickets,2024-25
+53,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-25,Vidarbha Cricket Association Ground,Nagpur,Nagpur XI,Yavatmal XI,Nagpur XI,bat,Nagpur XI,182,innings,2024-25
+54,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-28,Akola Cricket Ground,Akola,Akola XI,Wardha XI,Wardha XI,bat,Akola XI,171,innings,2024-25
+55,Vijay Merchant Trophy,FirstClass,male,U16,2024-10-31,Chandrapur Sports Complex,Chandrapur,Bhandara XI,Buldhana XI,Buldhana XI,bat,draw,131,runs,2024-25
+56,Vijay Merchant Trophy,FirstClass,male,U16,2024-11-03,VCA Stadium Jamtha,Nagpur,Akola XI,Amravati XI,Akola XI,field,Akola XI,186,wickets,2024-25
+57,Senior Women T20,T20,female,senior,2024-10-15,VCA Stadium Jamtha,Nagpur,Gondia XI,Wardha XI,Gondia XI,field,Wardha XI,102,runs,2024-25
+58,Senior Women T20,T20,female,senior,2024-10-18,VCA Stadium Jamtha,Nagpur,Gondia XI,Amravati XI,Gondia XI,field,Gondia XI,7,wickets,2024-25
+59,Senior Women T20,T20,female,senior,2024-10-21,Vidarbha Cricket Association Ground,Nagpur,Chandrapur XI,Gondia XI,Chandrapur XI,field,Chandrapur XI,4,wickets,2024-25
+60,Senior Women T20,T20,female,senior,2024-10-24,VCA Stadium Jamtha,Nagpur,Buldhana XI,Bhandara XI,Bhandara XI,bat,Bhandara XI,96,runs,2024-25
+61,Senior Women T20,T20,female,senior,2024-10-27,Vidarbha Cricket Association Ground,Nagpur,Bhandara XI,Amravati XI,Bhandara XI,field,Bhandara XI,4,wickets,2024-25
+62,Senior Women T20,T20,female,senior,2024-10-30,Amravati Cricket Ground,Amravati,Buldhana XI,Bhandara XI,Bhandara XI,field,Buldhana XI,19,runs,2024-25
+63,Senior Women T20,T20,female,senior,2024-11-02,Chandrapur Sports Complex,Chandrapur,Buldhana XI,Yavatmal XI,Yavatmal XI,field,Buldhana XI,99,runs,2024-25
+64,Senior Women T20,T20,female,senior,2024-11-05,VCA Stadium Jamtha,Nagpur,Wardha XI,Akola XI,Wardha XI,field,Wardha XI,5,wickets,2024-25
+65,Women One Day Trophy,ODI,female,senior,2024-10-17,Vidarbha Cricket Association Ground,Nagpur,Amravati XI,Akola XI,Akola XI,bat,Amravati XI,3,wickets,2024-25
+66,Women One Day Trophy,ODI,female,senior,2024-10-20,Chandrapur Sports Complex,Chandrapur,Nagpur XI,Bhandara XI,Nagpur XI,field,Bhandara XI,133,runs,2024-25
+67,Women One Day Trophy,ODI,female,senior,2024-10-23,VCA Stadium Jamtha,Nagpur,Gondia XI,Nagpur XI,Gondia XI,field,Nagpur XI,69,runs,2024-25
+68,Women One Day Trophy,ODI,female,senior,2024-10-26,Akola Cricket Ground,Akola,Chandrapur XI,Amravati XI,Chandrapur XI,bat,Chandrapur XI,111,runs,2024-25
+69,Women One Day Trophy,ODI,female,senior,2024-10-29,VCA Stadium Jamtha,Nagpur,Gondia XI,Amravati XI,Amravati XI,field,Gondia XI,41,runs,2024-25
+70,Women One Day Trophy,ODI,female,senior,2024-11-01,VCA Stadium Jamtha,Nagpur,Akola XI,Nagpur XI,Akola XI,field,Akola XI,5,wickets,2024-25
+71,Women One Day Trophy,ODI,female,senior,2024-11-04,Amravati Cricket Ground,Amravati,Akola XI,Nagpur XI,Akola XI,field,Akola XI,1,wickets,2024-25
+72,Women One Day Trophy,ODI,female,senior,2024-11-07,Amravati Cricket Ground,Amravati,Chandrapur XI,Yavatmal XI,Yavatmal XI,field,Yavatmal XI,6,wickets,2024-25
+73,U19 Women T20,T20,female,U19,2024-10-19,VCA Stadium Jamtha,Nagpur,Nagpur XI,Buldhana XI,Nagpur XI,field,Buldhana XI,6,runs,2024-25
+74,U19 Women T20,T20,female,U19,2024-10-22,Amravati Cricket Ground,Amravati,Buldhana XI,Yavatmal XI,Yavatmal XI,field,Buldhana XI,37,runs,2024-25
+75,U19 Women T20,T20,female,U19,2024-10-25,Chandrapur Sports Complex,Chandrapur,Nagpur XI,Bhandara XI,Nagpur XI,bat,Nagpur XI,10,runs,2024-25
+76,U19 Women T20,T20,female,U19,2024-10-28,Vidarbha Cricket Association Ground,Nagpur,Bhandara XI,Buldhana XI,Buldhana XI,field,Bhandara XI,7,runs,2024-25
+77,U19 Women T20,T20,female,U19,2024-10-31,Akola Cricket Ground,Akola,Amravati XI,Buldhana XI,Buldhana XI,bat,Amravati XI,7,wickets,2024-25
+78,U19 Women T20,T20,female,U19,2024-11-03,Wardha District Ground,Wardha,Nagpur XI,Wardha XI,Wardha XI,bat,Wardha XI,37,runs,2024-25
+79,U19 Women T20,T20,female,U19,2024-11-06,Vidarbha Cricket Association Ground,Nagpur,Buldhana XI,Akola XI,Buldhana XI,bat,Buldhana XI,26,runs,2024-25
+80,U19 Women T20,T20,female,U19,2024-11-09,VCA Stadium Jamtha,Nagpur,Nagpur XI,Buldhana XI,Buldhana XI,bat,Nagpur XI,2,wickets,2024-25
+81,U16 Women T20,T20,female,U16,2024-10-21,VCA Stadium Jamtha,Nagpur,Chandrapur XI,Wardha XI,Wardha XI,bat,Wardha XI,62,runs,2024-25
+82,U16 Women T20,T20,female,U16,2024-10-24,Amravati Cricket Ground,Amravati,Wardha XI,Amravati XI,Amravati XI,bat,Wardha XI,1,wickets,2024-25
+83,U16 Women T20,T20,female,U16,2024-10-27,Akola Cricket Ground,Akola,Chandrapur XI,Amravati XI,Amravati XI,field,Amravati XI,1,wickets,2024-25
+84,U16 Women T20,T20,female,U16,2024-10-30,Wardha District Ground,Wardha,Bhandara XI,Amravati XI,Bhandara XI,bat,Amravati XI,1,wickets,2024-25
+85,U16 Women T20,T20,female,U16,2024-11-02,Vidarbha Cricket Association Ground,Nagpur,Wardha XI,Yavatmal XI,Yavatmal XI,field,Yavatmal XI,7,wickets,2024-25
+86,U16 Women T20,T20,female,U16,2024-11-05,Vidarbha Cricket Association Ground,Nagpur,Nagpur XI,Wardha XI,Nagpur XI,field,Wardha XI,16,runs,2024-25
+87,U16 Women T20,T20,female,U16,2024-11-08,Vidarbha Cricket Association Ground,Nagpur,Akola XI,Amravati XI,Akola XI,bat,Amravati XI,8,wickets,2024-25
+88,U16 Women T20,T20,female,U16,2024-11-11,Amravati Cricket Ground,Amravati,Bhandara XI,Gondia XI,Gondia XI,field,Gondia XI,6,wickets,2024-25

@@ -1,0 +1,12 @@
+tournament_id,tournament_name,format,gender,age_group,overs_per_innings,season
+1,Ranji Trophy,FirstClass,male,senior,,2024-25
+2,Syed Mushtaq Ali Trophy,T20,male,senior,20,2024-25
+3,Vijay Hazare Trophy,ODI,male,senior,50,2024-25
+4,Col CK Nayudu Trophy,FirstClass,male,U25,,2024-25
+5,Vinoo Mankad Trophy,ODI,male,U19,50,2024-25
+6,U19 Men T20,T20,male,U19,20,2024-25
+7,Vijay Merchant Trophy,FirstClass,male,U16,,2024-25
+8,Senior Women T20,T20,female,senior,20,2024-25
+9,Women One Day Trophy,ODI,female,senior,50,2024-25
+10,U19 Women T20,T20,female,U19,20,2024-25
+11,U16 Women T20,T20,female,U16,20,2024-25
