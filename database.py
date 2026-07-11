@@ -1,3 +1,8 @@
+"""
+database.py — PostgreSQL connection and query execution
+Read-only access only. Connection uses a context manager
+so it closes cleanly after every query.
+"""
 import psycopg2
 import psycopg2.extras
 from config import DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD
@@ -47,7 +52,9 @@ def test_connection() -> bool:
         return False
 
 
-
+# The full schema context sent to the LLM with every query.
+# This is what keeps the LLM grounded — it can only reference
+# tables and columns that actually exist.
 SCHEMA_CONTEXT = """
 You are a cricket analytics SQL expert. The database is PostgreSQL.
 
@@ -127,6 +134,21 @@ VIEW: phase_bowling
   tournament_name, format, gender, age_group, season,
   balls_bowled, runs_conceded, wickets, dot_balls,
   economy_rate, dot_ball_percentage
+
+VIEW: fielding_summary
+  fielder_name, player_id, district, gender, age_group,
+  tournament_name, format, season, matches_played,
+  catches, caught_and_bowled, stumpings, run_outs,
+  total_dismissals_effected
+  NOTE: stumpings are wicket-keeper only. catches = fielder (not bowler).
+  caught_and_bowled = bowler took their own catch.
+
+VIEW: extras_summary
+  bowling_team, batting_team, match_id, innings_id,
+  tournament_name, format, gender, age_group, season,
+  wides, noballs, byes, leg_byes, total_extras,
+  extras_percentage, balls_bowled, indiscipline_rate
+  NOTE: indiscipline_rate = (wides + noballs) / balls_bowled * 100
 
 IMPORTANT CRICKET TERMINOLOGY MAPPINGS:
 - "SMAT" or "Syed Mushtaq Ali" → tournament_name LIKE '%Mushtaq%' OR tournament_name LIKE '%SMAT%'
