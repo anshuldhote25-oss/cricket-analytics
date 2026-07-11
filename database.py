@@ -150,6 +150,17 @@ VIEW: extras_summary
   extras_percentage, balls_bowled, indiscipline_rate
   NOTE: indiscipline_rate = (wides + noballs) / balls_bowled * 100
 
+VIEW: bowler_discipline
+  bowler_id, bowler_name, bowler_type, district,
+  tournament_name, format, gender, age_group, season,
+  matches_played, balls_bowled, wides, noballs,
+  total_indiscipline, total_extras_runs, indiscipline_rate
+  USE THIS VIEW for questions about bowlers giving extras,
+  wides, no balls, or bowling discipline.
+  IMPORTANT: the extras column is called total_extras_runs (NOT total_extras).
+  Use total_indiscipline for wides + noballs count.
+  Use indiscipline_rate for wides + noballs as a percentage of balls bowled.
+
 IMPORTANT CRICKET TERMINOLOGY MAPPINGS:
 - "SMAT" or "Syed Mushtaq Ali" → tournament_name LIKE '%Mushtaq%' OR tournament_name LIKE '%SMAT%'
 - "VHT" or "Vijay Hazare" → tournament_name LIKE '%Hazare%' OR tournament_name LIKE '%VHT%'
