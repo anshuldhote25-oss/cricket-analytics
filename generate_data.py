@@ -1,9 +1,3 @@
-"""
-VCA Cricket Analytics - Dummy Data Generator
-Generates realistic ball-by-ball data for all VCA domestic tournaments
-Male + Female, All Age Groups (Senior / U25 / U19 / U16)
-"""
-
 import random
 import json
 from datetime import date, timedelta
@@ -14,9 +8,6 @@ import os
 
 random.seed(42)  # reproducible data
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
 
 OUTPUT_DIR = "./output"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
@@ -24,18 +15,12 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # How many matches to generate per tournament (keep small for PoC)
 MATCHES_PER_TOURNAMENT = 8
 
-# ============================================================
-# VCA REAL DISTRICTS (Vidarbha region)
-# ============================================================
 VCA_DISTRICTS = [
     "Nagpur", "Amravati", "Wardha", "Yavatmal",
     "Chandrapur", "Gadchiroli", "Washim", "Akola",
     "Bhandara", "Gondia", "Buldhana"
 ]
 
-# ============================================================
-# REALISTIC PLAYER NAMES — Vidarbha/Maharashtra flavour
-# ============================================================
 
 MALE_FIRST_NAMES = [
     "Akshay", "Rahul", "Sanjay", "Vikas", "Rohit", "Amit",
@@ -60,9 +45,6 @@ SURNAMES = [
     "Bhatt", "Sharma", "Verma", "Singh", "Kumar", "Rao"
 ]
 
-# ============================================================
-# TOURNAMENT DEFINITIONS
-# ============================================================
 
 TOURNAMENTS = [
     # Senior Male
@@ -91,9 +73,6 @@ TOURNAMENTS = [
     {"name": "U16 Women T20",            "format": "T20",        "gender": "female", "age_group": "U16",    "overs": 20},
 ]
 
-# ============================================================
-# BOWLING STYLES — realistic distribution
-# ============================================================
 
 BOWLING_STYLES = [
     "right-arm pace",
@@ -107,9 +86,6 @@ BOWLING_STYLES = [
 
 BOWLING_STYLE_WEIGHTS = [0.25, 0.20, 0.12, 0.18, 0.10, 0.10, 0.05]
 
-# ============================================================
-# VENUES (Vidarbha + Maharashtra)
-# ============================================================
 
 VENUES = [
     ("VCA Stadium Jamtha", "Nagpur"),
@@ -120,9 +96,6 @@ VENUES = [
     ("Chandrapur Sports Complex", "Chandrapur"),
 ]
 
-# ============================================================
-# TEAMS — VCA internal teams by district
-# ============================================================
 
 VCA_TEAMS = [
     "Nagpur XI", "Amravati XI", "Wardha XI",
@@ -130,9 +103,6 @@ VCA_TEAMS = [
     "Buldhana XI", "Bhandara XI", "Gondia XI"
 ]
 
-# ============================================================
-# DATACLASSES
-# ============================================================
 
 @dataclass
 class Player:
@@ -297,10 +267,6 @@ def generate_players() -> List[Player]:
     return players
 
 
-# ============================================================
-# PHASE CALCULATION
-# ============================================================
-
 def get_phase(over_number: int, fmt: str) -> str:
     """
     over_number is 0-indexed
@@ -323,13 +289,8 @@ def get_phase(over_number: int, fmt: str) -> str:
         else:
             return "death"
     else:
-        return "play"  # First Class has no phase concept
+        return "play"  
 
-
-# ============================================================
-# BATTING PROFILE — realistic run generation
-# Each bowler type has different effectiveness vs different batters
-# ============================================================
 
 def get_player_skill_level(age_group: str) -> float:
     """
