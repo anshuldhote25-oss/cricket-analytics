@@ -161,6 +161,47 @@ VIEW: bowler_discipline
   Use total_indiscipline for wides + noballs count.
   Use indiscipline_rate for wides + noballs as a percentage of balls bowled.
 
+QUERY PATTERNS FOR COMMON REQUESTS:
+
+For all-rounder queries — join batting_summary and bowling_summary with players table:
+  SELECT p.name, p.player_role, bs.total_runs, bws.wickets
+  FROM players p
+  JOIN batting_summary bs ON p.player_id = bs.batter_id
+  JOIN bowling_summary bws ON p.player_id = bws.bowler_id
+  WHERE p.player_role = 'all-rounder'
+  AND bs.balls_faced >= 20 AND bws.balls_bowled >= 18
+  ORDER BY (bs.total_runs + bws.wickets * 20) DESC
+  LIMIT 10;
+
+For phase-specific bowling queries — use phase_bowling view:
+  SELECT pb.bowler_name, pb.bowler_type, pb.balls_bowled, pb.wickets,
+         pb.economy_rate, pb.dot_ball_percentage
+  FROM phase_bowling pb
+  WHERE pb.phase = 'powerplay'
+  AND pb.gender = 'female'
+  AND pb.balls_bowled >= 18
+  ORDER BY pb.economy_rate ASC
+  LIMIT 10;
+
+ALIAS RULES — always use these consistent aliases:
+  batting_summary   → bs
+  bowling_summary   → bws
+  phase_batting     → pb_bat
+  phase_bowling     → pb_bowl
+  players           → p
+  deliveries        → d
+  matches           → m
+  innings           → i
+  fielding_summary  → fs
+  extras_summary    → es
+  bowler_discipline → bd
+
+For player role filtering — always join players table:
+  player_role values: 'batter', 'bowler', 'all-rounder', 'wicket-keeper'
+  player_role is ONLY in the players table, never in the views.
+  Always do: JOIN players p ON p.player_id = bs.batter_id (or bws.bowler_id)
+  then filter: WHERE p.player_role = '...'
+  
 IMPORTANT CRICKET TERMINOLOGY MAPPINGS:
 - "SMAT" or "Syed Mushtaq Ali" → tournament_name LIKE '%Mushtaq%' OR tournament_name LIKE '%SMAT%'
 - "VHT" or "Vijay Hazare" → tournament_name LIKE '%Hazare%' OR tournament_name LIKE '%VHT%'
