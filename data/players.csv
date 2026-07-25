@@ -1,0 +1,236 @@
+player_id,name,gender,date_of_birth,batting_style,bowling_style,player_role,district,age_group,is_wicket_keeper
+1,Rushikesh Sarwate,male,2006-02-26,right-hand,left-arm pace,batter,Bhandara,senior,False
+2,Sanjay Patil,male,1993-07-03,right-hand,,batter,Nagpur,senior,False
+3,Yash Shende,male,1993-03-29,right-hand,,batter,Wardha,senior,False
+4,Atharva Gawai,male,1996-02-27,right-hand,,wicket-keeper,Gadchiroli,senior,True
+5,Vikas Raut,male,1994-05-31,right-hand,,batter,Nagpur,senior,False
+6,Harsh Ingle,male,2003-01-05,right-hand,,batter,Gadchiroli,senior,False
+7,Pranav Shende,male,2004-06-23,right-hand,left-arm wrist spin,all-rounder,Yavatmal,senior,False
+8,Arjun Sarwate,male,1994-02-27,right-hand,right-arm pace,all-rounder,Gadchiroli,senior,False
+9,Ganesh Kulkarni,male,1997-07-24,left-hand,off-spin,bowler,Wardha,senior,False
+10,Yash Nair,male,1999-04-26,right-hand,,batter,Bhandara,senior,False
+11,Nikhil Kulkarni,male,1996-06-20,right-hand,,batter,Chandrapur,senior,False
+12,Sanjay Shende,male,1996-04-01,right-hand,left-arm orthodox,bowler,Akola,senior,False
+13,Rohit Khadse,male,2002-03-13,left-hand,off-spin,bowler,Washim,senior,False
+14,Vedant Patil,male,1994-01-15,right-hand,,wicket-keeper,Bhandara,senior,True
+15,Tushar Raut,male,2005-05-21,right-hand,,batter,Gondia,senior,False
+16,Sanjay Kolhe,male,1993-09-17,left-hand,left-arm wrist spin,bowler,Nagpur,senior,False
+17,Omkar Nair,male,2002-08-02,left-hand,leg-spin,all-rounder,Gadchiroli,senior,False
+18,Vikas Meshram,male,1993-04-30,right-hand,,wicket-keeper,Chandrapur,senior,True
+19,Shubham Bhatt,male,2000-10-31,left-hand,right-arm medium pace,all-rounder,Buldhana,senior,False
+20,Shubham More,male,2000-04-30,right-hand,,batter,Bhandara,senior,False
+21,Kunal Wakhare,male,1995-11-11,right-hand,,wicket-keeper,Chandrapur,senior,True
+22,Nikhil Satish,male,1998-10-01,left-hand,,batter,Amravati,senior,False
+23,Devraj Deshmukh,male,2002-05-13,right-hand,,wicket-keeper,Wardha,senior,True
+24,Aditya Chaudhari,male,1993-04-02,left-hand,off-spin,all-rounder,Chandrapur,senior,False
+25,Mayur Kulkarni,male,1994-12-07,left-hand,right-arm pace,bowler,Amravati,senior,False
+26,Suraj Wakhare,male,1998-09-20,right-hand,,batter,Yavatmal,senior,False
+27,Sanjay Kumar,male,2005-01-28,right-hand,,batter,Yavatmal,senior,False
+28,Yash Jadhav,male,1991-03-18,left-hand,right-arm pace,all-rounder,Amravati,senior,False
+29,Omkar Gawai,male,1994-12-15,right-hand,right-arm pace,all-rounder,Buldhana,senior,False
+30,Rushikesh Sarwate,male,2004-12-22,left-hand,right-arm pace,all-rounder,Yavatmal,senior,False
+31,Ganesh Deshmukh,male,1992-05-09,right-hand,left-arm wrist spin,batter,Amravati,senior,False
+32,Aniket Sharma,male,2003-06-22,right-hand,right-arm pace,bowler,Amravati,senior,False
+33,Kunal Bhatt,male,1999-04-24,right-hand,left-arm orthodox,bowler,Nagpur,senior,False
+34,Amit Kolhe,male,2005-12-29,right-hand,left-arm pace,all-rounder,Washim,senior,False
+35,Atharva Nair,male,1991-05-02,right-hand,right-arm medium pace,batter,Bhandara,senior,False
+36,Rahul Nair,male,1996-06-19,right-hand,left-arm orthodox,bowler,Bhandara,senior,False
+37,Amit Satish,male,2004-04-12,right-hand,,batter,Washim,senior,False
+38,Vikas Kumar,male,1998-09-25,right-hand,right-arm medium pace,bowler,Gondia,senior,False
+39,Pranav Chaudhari,male,1996-03-07,right-hand,right-arm pace,all-rounder,Washim,senior,False
+40,Rohit Kulkarni,male,1996-11-26,right-hand,right-arm pace,all-rounder,Akola,senior,False
+41,Siddhesh Patil,male,2008-06-08,right-hand,right-arm pace,bowler,Gadchiroli,U25,False
+42,Vedant Raut,male,2007-01-08,right-hand,left-arm pace,bowler,Chandrapur,U25,False
+43,Siddhesh Sharma,male,2002-10-20,right-hand,right-arm medium pace,all-rounder,Buldhana,U25,False
+44,Vikas Kumar,male,2007-03-03,right-hand,,batter,Chandrapur,U25,False
+45,Pratik More,male,2007-01-22,right-hand,right-arm medium pace,bowler,Akola,U25,False
+46,Aditya Kumar,male,2002-06-21,right-hand,right-arm medium pace,bowler,Nagpur,U25,False
+47,Suraj Bhatt,male,2006-08-24,left-hand,,batter,Washim,U25,False
+48,Yash Wakhare,male,2008-06-07,left-hand,right-arm pace,all-rounder,Nagpur,U25,False
+49,Lakshya Dhote,male,2003-10-08,right-hand,,batter,Nagpur,U25,False
+50,Vedant Dhote,male,2006-08-01,right-hand,,batter,Washim,U25,False
+51,Siddhesh Nair,male,2007-03-17,left-hand,,wicket-keeper,Wardha,U25,True
+52,Vedant Gawai,male,2008-04-15,left-hand,,batter,Buldhana,U25,False
+53,Arjun Nair,male,2002-03-12,right-hand,right-arm pace,all-rounder,Nagpur,U25,False
+54,Arjun Borkar,male,2007-04-05,left-hand,right-arm medium pace,bowler,Yavatmal,U25,False
+55,Nikhil Wakhare,male,2003-04-10,right-hand,right-arm medium pace,batter,Chandrapur,U25,False
+56,Kiran Deshpande,male,2003-12-25,right-hand,right-arm medium pace,all-rounder,Nagpur,U25,False
+57,Vikas Kumar,male,2006-04-16,right-hand,,wicket-keeper,Nagpur,U25,True
+58,Vikas More,male,2005-01-21,left-hand,,batter,Bhandara,U25,False
+59,Vikas Kolhe,male,2004-04-10,right-hand,right-arm pace,all-rounder,Bhandara,U25,False
+60,Omkar Nair,male,2002-08-08,right-hand,left-arm orthodox,bowler,Gadchiroli,U25,False
+61,Siddhesh Nagpure,male,2003-05-15,left-hand,,batter,Washim,U25,False
+62,Suraj Kolhe,male,2003-02-16,right-hand,,batter,Washim,U25,False
+63,Omkar Nair,male,2006-09-04,right-hand,leg-spin,bowler,Chandrapur,U25,False
+64,Pratik Shende,male,2004-09-23,right-hand,,batter,Buldhana,U25,False
+65,Ganesh Chaudhari,male,2005-04-21,right-hand,,batter,Gondia,U25,False
+66,Suraj Raut,male,2002-03-19,right-hand,leg-spin,batter,Nagpur,U25,False
+67,Rahul Bawne,male,2004-09-07,left-hand,,batter,Buldhana,U25,False
+68,Pranav Shende,male,2002-07-26,right-hand,right-arm pace,bowler,Nagpur,U25,False
+69,Vedant Bhatt,male,2002-05-24,left-hand,,batter,Bhandara,U25,False
+70,Aniket Satish,male,2004-03-11,left-hand,off-spin,batter,Akola,U25,False
+71,Omkar Chaudhari,male,2003-09-16,right-hand,right-arm medium pace,all-rounder,Bhandara,U25,False
+72,Vaibhav Verma,male,2003-12-01,left-hand,left-arm pace,all-rounder,Chandrapur,U25,False
+73,Devraj Bawne,male,2001-08-25,right-hand,left-arm pace,all-rounder,Yavatmal,U25,False
+74,Aditya Ingle,male,2008-02-20,right-hand,,batter,Amravati,U25,False
+75,Rohit Jadhav,male,2007-01-01,right-hand,right-arm pace,all-rounder,Washim,U25,False
+76,Suraj Deshmukh,male,2004-12-16,right-hand,right-arm medium pace,all-rounder,Gondia,U25,False
+77,Atharva Wakhare,male,2001-09-26,right-hand,,batter,Washim,U25,False
+78,Arjun Kumar,male,2001-12-15,right-hand,leg-spin,all-rounder,Yavatmal,U25,False
+79,Tushar Bawne,male,2005-12-05,right-hand,off-spin,bowler,Washim,U25,False
+80,Harsh Thakur,male,2001-11-20,left-hand,,wicket-keeper,Bhandara,U25,True
+81,Akshay Rao,male,2007-09-16,right-hand,,batter,Wardha,U19,False
+82,Arjun Ingle,male,2010-06-20,right-hand,,batter,Gadchiroli,U19,False
+83,Devraj Kumar,male,2008-02-24,left-hand,right-arm medium pace,all-rounder,Amravati,U19,False
+84,Tushar Wakhare,male,2011-01-17,right-hand,,batter,Nagpur,U19,False
+85,Devraj Wakhare,male,2010-04-04,left-hand,right-arm pace,bowler,Akola,U19,False
+86,Omkar Sarwate,male,2009-11-19,right-hand,right-arm pace,all-rounder,Gondia,U19,False
+87,Harsh Joshi,male,2011-04-23,left-hand,right-arm pace,batter,Chandrapur,U19,False
+88,Pranav Kulkarni,male,2007-12-25,left-hand,,batter,Buldhana,U19,False
+89,Nikhil Sarwate,male,2008-07-30,right-hand,,batter,Nagpur,U19,False
+90,Kiran Deshmukh,male,2007-08-12,right-hand,right-arm medium pace,bowler,Washim,U19,False
+91,Lakshya Borkar,male,2010-12-06,left-hand,leg-spin,bowler,Wardha,U19,False
+92,Vaibhav Thakur,male,2008-09-03,left-hand,left-arm pace,bowler,Washim,U19,False
+93,Lakshya Nair,male,2009-01-31,left-hand,right-arm pace,all-rounder,Akola,U19,False
+94,Nikhil Bhatt,male,2007-09-28,right-hand,right-arm pace,bowler,Gadchiroli,U19,False
+95,Amit Borkar,male,2010-01-15,left-hand,,batter,Chandrapur,U19,False
+96,Yash Wakhare,male,2010-06-02,right-hand,left-arm pace,bowler,Yavatmal,U19,False
+97,Atharva Borkar,male,2007-11-29,left-hand,left-arm orthodox,batter,Yavatmal,U19,False
+98,Pratik Kulkarni,male,2008-11-15,right-hand,,batter,Bhandara,U19,False
+99,Suraj Dhote,male,2008-02-28,right-hand,,batter,Gadchiroli,U19,False
+100,Vikas Nair,male,2010-04-08,right-hand,off-spin,bowler,Bhandara,U19,False
+101,Siddhesh Meshram,male,2011-04-07,right-hand,right-arm medium pace,bowler,Bhandara,U19,False
+102,Rohit Khadse,male,2011-06-18,right-hand,right-arm pace,all-rounder,Akola,U19,False
+103,Vikas Singh,male,2010-09-25,right-hand,right-arm medium pace,bowler,Nagpur,U19,False
+104,Aditya Singh,male,2008-05-18,left-hand,right-arm pace,bowler,Buldhana,U19,False
+105,Omkar Satish,male,2010-04-30,left-hand,,wicket-keeper,Amravati,U19,True
+106,Nikhil Sarwate,male,2007-09-09,right-hand,leg-spin,bowler,Washim,U19,False
+107,Aniket Rao,male,2008-02-14,left-hand,,wicket-keeper,Chandrapur,U19,True
+108,Pranav More,male,2010-09-06,left-hand,,batter,Buldhana,U19,False
+109,Ganesh Khadse,male,2011-04-26,right-hand,right-arm pace,bowler,Washim,U19,False
+110,Aniket Joshi,male,2008-02-17,right-hand,,batter,Akola,U19,False
+111,Sanjay Kulkarni,male,2010-03-02,left-hand,off-spin,bowler,Yavatmal,U19,False
+112,Vaibhav Sarwate,male,2009-08-18,right-hand,off-spin,batter,Nagpur,U19,False
+113,Amit Sharma,male,2008-09-14,left-hand,right-arm medium pace,bowler,Amravati,U19,False
+114,Aniket Joshi,male,2008-07-22,right-hand,,batter,Akola,U19,False
+115,Sanjay More,male,2010-12-06,left-hand,right-arm pace,bowler,Yavatmal,U19,False
+116,Omkar Verma,male,2010-08-05,left-hand,leg-spin,bowler,Wardha,U19,False
+117,Tushar Chaudhari,male,2008-02-24,right-hand,off-spin,bowler,Akola,U19,False
+118,Sanjay Borkar,male,2008-12-18,right-hand,left-arm orthodox,all-rounder,Gadchiroli,U19,False
+119,Vaibhav Joshi,male,2008-02-19,right-hand,leg-spin,bowler,Nagpur,U19,False
+120,Aniket Raut,male,2009-03-08,right-hand,,wicket-keeper,Washim,U19,True
+121,Arjun Chaudhari,male,2012-08-12,left-hand,right-arm pace,bowler,Bhandara,U16,False
+122,Kiran More,male,2011-08-29,right-hand,,batter,Wardha,U16,False
+123,Kunal Meshram,male,2011-07-23,right-hand,,batter,Yavatmal,U16,False
+124,Atharva Thakur,male,2011-10-06,right-hand,right-arm pace,bowler,Amravati,U16,False
+125,Aniket Sarwate,male,2011-04-28,right-hand,left-arm pace,all-rounder,Chandrapur,U16,False
+126,Vaibhav Verma,male,2011-11-16,right-hand,right-arm medium pace,bowler,Gondia,U16,False
+127,Shubham Nair,male,2013-06-09,right-hand,right-arm medium pace,all-rounder,Bhandara,U16,False
+128,Aditya Verma,male,2013-02-20,left-hand,off-spin,all-rounder,Buldhana,U16,False
+129,Tushar Singh,male,2012-11-28,right-hand,,batter,Bhandara,U16,False
+130,Mayur Ingle,male,2012-04-09,left-hand,,batter,Washim,U16,False
+131,Rahul Nagpure,male,2010-11-15,left-hand,right-arm medium pace,all-rounder,Buldhana,U16,False
+132,Samarth Verma,male,2011-04-29,right-hand,,batter,Gondia,U16,False
+133,Suraj Singh,male,2012-12-01,right-hand,,wicket-keeper,Nagpur,U16,True
+134,Harsh Jadhav,male,2011-08-14,left-hand,,batter,Chandrapur,U16,False
+135,Suraj More,male,2010-12-24,right-hand,left-arm orthodox,all-rounder,Bhandara,U16,False
+136,Mayur Nagpure,male,2010-11-08,left-hand,right-arm medium pace,batter,Buldhana,U16,False
+137,Omkar Rao,male,2012-03-20,left-hand,right-arm pace,bowler,Buldhana,U16,False
+138,Atharva Singh,male,2012-11-29,right-hand,right-arm pace,batter,Gadchiroli,U16,False
+139,Samarth Satish,male,2012-01-13,right-hand,,batter,Gondia,U16,False
+140,Omkar Sharma,male,2013-04-18,right-hand,right-arm medium pace,bowler,Buldhana,U16,False
+141,Nikhil Borkar,male,2011-05-03,right-hand,left-arm pace,bowler,Buldhana,U16,False
+142,Akshay Kumar,male,2012-02-18,right-hand,,batter,Gadchiroli,U16,False
+143,Pranav Meshram,male,2010-12-10,right-hand,right-arm medium pace,bowler,Washim,U16,False
+144,Arjun Borkar,male,2013-03-15,right-hand,right-arm medium pace,bowler,Chandrapur,U16,False
+145,Akshay Verma,male,2010-12-25,right-hand,off-spin,bowler,Nagpur,U16,False
+146,Kunal More,male,2010-11-03,left-hand,,wicket-keeper,Yavatmal,U16,True
+147,Siddhesh Sharma,male,2012-03-24,right-hand,off-spin,bowler,Buldhana,U16,False
+148,Omkar Verma,male,2012-08-27,right-hand,right-arm pace,bowler,Akola,U16,False
+149,Rahul Patil,male,2012-05-08,right-hand,,batter,Wardha,U16,False
+150,Ganesh Jadhav,male,2011-01-09,right-hand,,wicket-keeper,Wardha,U16,True
+151,Aditya Rao,male,2012-02-14,left-hand,left-arm pace,batter,Amravati,U16,False
+152,Rohit Bhatt,male,2012-08-02,left-hand,,wicket-keeper,Bhandara,U16,True
+153,Kiran Raut,male,2012-07-07,right-hand,,batter,Buldhana,U16,False
+154,Aditya Patil,male,2011-08-23,left-hand,left-arm orthodox,batter,Nagpur,U16,False
+155,Siddhesh Kumar,male,2011-01-29,left-hand,right-arm medium pace,batter,Akola,U16,False
+156,Kunal Joshi,male,2011-08-17,right-hand,,batter,Chandrapur,U16,False
+157,Tushar Sarwate,male,2013-03-16,left-hand,,batter,Buldhana,U16,False
+158,Harsh Joshi,male,2010-12-13,right-hand,left-arm orthodox,all-rounder,Buldhana,U16,False
+159,Vikas Verma,male,2011-09-03,right-hand,,wicket-keeper,Nagpur,U16,True
+160,Atharva Dhote,male,2012-11-29,right-hand,,batter,Buldhana,U16,False
+161,Sonali Deshmukh,female,1995-06-18,right-hand,left-arm pace,batter,Akola,senior,False
+162,Priya Kulkarni,female,1999-08-24,right-hand,,wicket-keeper,Nagpur,senior,True
+163,Rutuja Bawne,female,2001-10-01,right-hand,left-arm pace,all-rounder,Gondia,senior,False
+164,Shraddha Verma,female,1999-01-31,left-hand,off-spin,all-rounder,Chandrapur,senior,False
+165,Pooja Jadhav,female,1998-04-20,right-hand,right-arm pace,all-rounder,Gadchiroli,senior,False
+166,Dipika Patil,female,1996-07-10,right-hand,,batter,Bhandara,senior,False
+167,Sneha Nair,female,2003-11-16,right-hand,off-spin,bowler,Akola,senior,False
+168,Tanvi Bawne,female,2004-08-13,right-hand,left-arm wrist spin,bowler,Nagpur,senior,False
+169,Vedika Singh,female,1993-12-13,right-hand,left-arm orthodox,bowler,Amravati,senior,False
+170,Priya Nagpure,female,2002-06-14,right-hand,off-spin,bowler,Gadchiroli,senior,False
+171,Anushka More,female,1996-11-28,right-hand,leg-spin,bowler,Amravati,senior,False
+172,Vaishnavi Deshpande,female,1999-12-10,right-hand,,batter,Akola,senior,False
+173,Anushka Gawai,female,2003-02-07,right-hand,right-arm medium pace,all-rounder,Wardha,senior,False
+174,Pradnya Rao,female,1991-06-16,right-hand,,batter,Gadchiroli,senior,False
+175,Pooja Deshmukh,female,2004-09-19,left-hand,off-spin,bowler,Washim,senior,False
+176,Sonali Singh,female,1993-06-23,left-hand,right-arm medium pace,bowler,Gondia,senior,False
+177,Tanvi Shende,female,2001-08-15,right-hand,right-arm medium pace,all-rounder,Bhandara,senior,False
+178,Sonali Sarwate,female,1997-09-28,right-hand,left-arm pace,bowler,Gondia,senior,False
+179,Rasika Kulkarni,female,2005-09-08,left-hand,right-arm medium pace,all-rounder,Wardha,senior,False
+180,Swati Joshi,female,1997-01-26,right-hand,off-spin,batter,Buldhana,senior,False
+181,Anushka Raut,female,2001-08-27,left-hand,,batter,Washim,senior,False
+182,Gauri Ingle,female,1996-04-29,right-hand,leg-spin,all-rounder,Gondia,senior,False
+183,Rasika Raut,female,2005-04-28,right-hand,off-spin,bowler,Chandrapur,senior,False
+184,Pallavi Kulkarni,female,1992-11-13,right-hand,right-arm pace,bowler,Bhandara,senior,False
+185,Sneha Dhote,female,1993-05-24,right-hand,left-arm pace,all-rounder,Buldhana,senior,False
+186,Manasi Satish,female,2009-12-25,left-hand,leg-spin,batter,Yavatmal,U19,False
+187,Pooja Bhatt,female,2009-02-17,right-hand,,batter,Wardha,U19,False
+188,Pooja Kolhe,female,2009-11-01,right-hand,right-arm medium pace,all-rounder,Washim,U19,False
+189,Nikita Satish,female,2008-07-06,right-hand,,batter,Washim,U19,False
+190,Komal Kolhe,female,2008-02-18,right-hand,,batter,Gondia,U19,False
+191,Pallavi Verma,female,2009-05-31,right-hand,,batter,Washim,U19,False
+192,Tanvi Raut,female,2008-02-08,left-hand,,batter,Amravati,U19,False
+193,Tanvi Deshpande,female,2010-10-17,right-hand,,wicket-keeper,Gadchiroli,U19,True
+194,Sonali Nair,female,2010-03-17,right-hand,off-spin,batter,Wardha,U19,False
+195,Vaishnavi Raut,female,2009-08-28,right-hand,leg-spin,all-rounder,Akola,U19,False
+196,Pradnya Rao,female,2008-08-28,right-hand,left-arm pace,bowler,Buldhana,U19,False
+197,Manasi Sharma,female,2008-09-16,right-hand,right-arm medium pace,bowler,Akola,U19,False
+198,Anjali Satish,female,2009-02-19,right-hand,left-arm orthodox,all-rounder,Gondia,U19,False
+199,Rasika Chaudhari,female,2007-11-22,right-hand,,wicket-keeper,Nagpur,U19,True
+200,Pallavi Rao,female,2010-02-01,right-hand,left-arm wrist spin,bowler,Akola,U19,False
+201,Sneha Sharma,female,2009-06-02,right-hand,left-arm wrist spin,batter,Akola,U19,False
+202,Pallavi Chaudhari,female,2010-01-10,right-hand,,batter,Gadchiroli,U19,False
+203,Pradnya More,female,2010-08-26,right-hand,right-arm medium pace,batter,Buldhana,U19,False
+204,Anushka Meshram,female,2008-08-13,left-hand,right-arm pace,bowler,Amravati,U19,False
+205,Komal Kulkarni,female,2010-01-17,right-hand,off-spin,all-rounder,Wardha,U19,False
+206,Rasika Joshi,female,2011-02-07,right-hand,right-arm medium pace,bowler,Wardha,U19,False
+207,Pradnya Joshi,female,2010-08-19,right-hand,right-arm pace,bowler,Chandrapur,U19,False
+208,Neha Shende,female,2008-11-09,right-hand,,wicket-keeper,Wardha,U19,True
+209,Priya Meshram,female,2010-10-29,left-hand,left-arm orthodox,all-rounder,Nagpur,U19,False
+210,Pradnya Nagpure,female,2009-09-13,right-hand,,batter,Gondia,U19,False
+211,Neha Nair,female,2012-06-22,right-hand,right-arm pace,all-rounder,Akola,U16,False
+212,Rasika Meshram,female,2010-11-28,right-hand,,batter,Akola,U16,False
+213,Shraddha Dhote,female,2010-09-26,left-hand,right-arm medium pace,bowler,Washim,U16,False
+214,Tanvi Chaudhari,female,2012-04-23,left-hand,right-arm pace,all-rounder,Chandrapur,U16,False
+215,Anjali Deshpande,female,2012-01-06,right-hand,,batter,Amravati,U16,False
+216,Manasi Raut,female,2013-02-25,right-hand,leg-spin,bowler,Amravati,U16,False
+217,Dipika Verma,female,2012-01-18,left-hand,right-arm medium pace,bowler,Gadchiroli,U16,False
+218,Dipika Kolhe,female,2013-01-04,right-hand,right-arm medium pace,batter,Buldhana,U16,False
+219,Rutuja Sharma,female,2013-05-05,right-hand,,wicket-keeper,Akola,U16,True
+220,Apurva Verma,female,2012-07-18,right-hand,left-arm orthodox,bowler,Nagpur,U16,False
+221,Swati Shende,female,2012-10-07,left-hand,right-arm medium pace,bowler,Chandrapur,U16,False
+222,Dipika Meshram,female,2013-06-20,right-hand,off-spin,bowler,Amravati,U16,False
+223,Sneha Verma,female,2011-09-13,right-hand,off-spin,bowler,Wardha,U16,False
+224,Manasi Gawai,female,2012-09-03,right-hand,right-arm pace,bowler,Buldhana,U16,False
+225,Priya Chaudhari,female,2012-06-10,left-hand,leg-spin,bowler,Bhandara,U16,False
+226,Siddhi Wakhare,female,2011-11-17,right-hand,right-arm medium pace,bowler,Nagpur,U16,False
+227,Sonali Sharma,female,2013-01-19,right-hand,right-arm pace,all-rounder,Gondia,U16,False
+228,Nikita Bhatt,female,2012-05-07,right-hand,leg-spin,bowler,Wardha,U16,False
+229,Pradnya Ingle,female,2010-11-12,right-hand,right-arm pace,all-rounder,Akola,U16,False
+230,Anjali Meshram,female,2013-06-22,left-hand,right-arm medium pace,all-rounder,Chandrapur,U16,False
+231,Tanvi Kolhe,female,2010-11-15,right-hand,right-arm pace,all-rounder,Gadchiroli,U16,False
+232,Anjali Singh,female,2011-01-27,right-hand,right-arm medium pace,all-rounder,Washim,U16,False
+233,Nikita Ingle,female,2012-01-23,left-hand,left-arm pace,bowler,Bhandara,U16,False
+234,Swati Sharma,female,2012-12-09,right-hand,leg-spin,bowler,Bhandara,U16,False
+235,Manasi Nagpure,female,2013-06-04,right-hand,,batter,Washim,U16,False
