@@ -1,248 +1,356 @@
-# Cricket Analytics AI Agent 🏏
+# Cricket Analytics AI Agent
 
-Ask questions about player performance in plain English and get instant answers — no SQL, no spreadsheets, no waiting for a data analyst.
+An AI-powered conversational interface for cricket scouting analytics. Query ball-by-ball match data in plain English and get instant answers — no SQL required.
 
----
-
-## What you can ask
-
-```
-Top 10 T20 batters by strike rate this season
-Which bowlers have the best economy in the powerplay?
-Top U19 female batters by total runs
-Who took the most catches this season?
-Best leg-spin bowlers in SMAT by wickets taken
-Which teams give the most wides and no balls?
-Top all-rounders by runs and wickets combined
-```
+**Status**: Proof of Concept (PoC) | **Phase 2**: Web interface in progress
 
 ---
 
-## What you need
+## Overview
 
-| Software | Version | Download |
-|---|---|---|
-| Python | 3.10+ | python.org/downloads |
-| PostgreSQL | 14+ | enterprisedb.com/downloads/postgres-postgresql-downloads |
-| Node.js | 18+ | nodejs.org |
-| TablePlus | Any | tableplus.com |
-| VS Code | Any | code.visualstudio.com |
-| Git | Any | git-scm.com/downloads |
-| Nginx | Any | via Homebrew: `brew install nginx` |
+Selectors, coaches, and scouts can now ask complex scouting questions in plain English and receive data-backed answers instantly. No SQL knowledge required.
+
+**Example questions:**
+- "Top 10 T20 batters by strike rate"
+- "Left-arm orthodox bowlers with economy rate under 7 in the powerplay"
+- "Best fielders in SMAT tournament"
+- "Catches taken per district in Ranji Trophy"
+- "Bowlers with most indiscipline (wides + no balls) in death overs"
 
 ---
 
-## Setting it up
+## Technology Stack
 
-### 1. Clone the repo
+| Component | Technology |
+|-----------|-----------|
+| **Backend** | FastAPI (Python) + PostgreSQL 18 |
+| **LLM** | Groq API — Llama 3.3 70B (free tier) |
+| **Frontend** | React 18 + Vite 6 (dark cricket theme) |
+| **Web Server** | Nginx with self-signed SSL |
+| **Public Access** | ngrok (PoC testing) |
+| **SQL Validation** | sqlglot (SELECT-only enforcement) |
+| **Database Manager** | TablePlus |
 
-```bash
-git clone https://github.com/anshuldhote25-oss/cricket-analytics.git
-cd cricket-analytics
-```
+---
 
-### 2. Install Python packages
+## Getting Started
 
-```bash
-pip3 install -r requirements.txt
-```
+### Prerequisites
 
-### 3. Set up the database
+- macOS (Apple Silicon) or Linux
+- PostgreSQL 18 (running via TablePlus)
+- Python 3.14+
+- Node.js 18+
+- Groq API key (free tier, no credit card required): [console.groq.com](https://console.groq.com)
 
-Open **TablePlus**, connect to PostgreSQL, and create the database:
-
-```sql
-CREATE DATABASE cricket_analytics_db;
-```
-
-Switch to it, then run `schema.sql` — open it, copy all, paste into a query tab, click Run All.
-
-### 4. Load the data
-
-```bash
-python3 load_data.py
-```
-
-Expected output:
-```
-[OK] tournaments  — 11 rows
-[OK] players      — 235 rows
-[OK] matches      — 88 rows
-[OK] innings      — 176 rows
-[OK] deliveries   — 19551 rows
-All data loaded successfully!
-```
-
-### 5. Get a free API key
-
-1. Go to **github.com/marketplace/models**
-2. Sign in with your GitHub account
-3. Click GPT-4o-mini → Get API key
-4. Copy the token (starts with `github_pat_...`)
-
-No credit card needed.
-
-### 6. Configure your credentials
+### 1. Clone & Setup
 
 ```bash
-cp .env.example .env
+cd ~/Downloads/Circullence/CricPy/cricket-analytics
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Open `.env` and fill in:
+### 2. Configure Environment
 
-```
-GITHUB_TOKEN=your_github_token_here
+Create `.env` file (copy from `.env.example`):
 
+```env
+GROQ_API_KEY=gsk_...
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=cricket_analytics_db
 DB_USER=postgres
-DB_PASSWORD=your_postgres_password
+DB_PASSWORD=your_password
 ```
 
-Never share this file with anyone.
+### 3. Initialize Database
 
-### 7. Build the React frontend
+**Via TablePlus:**
+1. Open TablePlus and connect to your PostgreSQL database
+2. Run `schema.sql`
+3. Run `data/add_fielding_extras.sql`
+4. Run `data/add_bowler_discipline.sql`
 
+**Or via Python:**
 ```bash
-cd frontend
-npm install
-npm run build
-cd ..
+python3 load_data.py
 ```
 
-### 8. Run the app
+### 4. Run the Application
 
-**CLI mode:**
-```bash
-python3 main.py
-```
-
-**Web mode (browser):**
+**Terminal Tab 1 — FastAPI Backend:**
 ```bash
 uvicorn web_app:app --host 127.0.0.1 --port 8000
 ```
 
-Then open **http://localhost:8000**
-
----
-
-## Deploying over HTTPS with Nginx + ngrok
-
-See **DEPLOYMENT.md** for full instructions. Summary:
-
+**Terminal Tab 2 — Nginx Web Server:**
 ```bash
-# Generate SSL certificate
-mkdir -p ~/.ssl/cricket
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
-  -keyout ~/.ssl/cricket/cricket.key \
-  -out ~/.ssl/cricket/cricket.crt \
-  -subj "/C=IN/ST=Maharashtra/L=Nagpur/O=CricketAnalytics/CN=localhost"
+sudo nginx
+```
 
-# Install and start Nginx
-brew install nginx
-sudo cp nginx.conf /opt/homebrew/etc/nginx/nginx.conf
-sudo nginx -t && sudo nginx
-
-# Start FastAPI
-uvicorn web_app:app --host 127.0.0.1 --port 8000
-
-# Get a public URL (new terminal tab)
-brew install ngrok/ngrok/ngrok
+**Terminal Tab 3 — ngrok Public Tunnel (for testing):**
+```bash
 ngrok http 8000
 ```
 
-Your app will be live at the `https://...ngrok-free.app` URL ngrok gives you.
+Visit: `http://localhost` (local) or `https://<ngrok-url>` (public testing)
 
 ---
 
-## Project structure
+## Project Structure
 
 ```
 cricket-analytics/
-├── main.py                ← CLI entry point
-├── web_app.py             ← Web interface (FastAPI backend)
-├── agent.py               ← AI layer — translates questions to SQL
-├── database.py            ← PostgreSQL connection + schema context
-├── validator.py           ← SQL safety validation (blocks write ops)
-├── config.py              ← Environment variable loader
-├── load_data.py           ← Loads all CSV data into the database
-├── generate_data.py       ← Regenerates synthetic data if needed
-├── requirements.txt       ← Python dependencies
-├── schema.sql             ← Database schema (run once to set up)
-├── nginx.conf             ← Nginx reverse proxy config
-├── start.sh               ← One-command startup script
-├── DEPLOYMENT.md          ← Full deployment guide
-├── .env.example           ← Template for your .env file
-├── .gitignore             ← Keeps secrets out of Git
-├── frontend/              ← React source code
+├── main.py                          # CLI entry point
+├── web_app.py                       # FastAPI backend + static file serving
+├── agent.py                         # Groq API call, NL→SQL translation
+├── database.py                      # PostgreSQL connection, schema context
+├── validator.py                     # SQL safety validation (sqlglot)
+├── config.py                        # .env loader
+├── load_data.py                     # CSV data loader
+├── generate_data.py                 # Synthetic data generator
+├── requirements.txt                 # Python dependencies
+├── schema.sql                       # PostgreSQL schema + base views
+├── nginx.conf                       # Nginx reverse proxy config
+├── .env                             # Credentials (never commit)
+├── .env.example                     # Template
+├── .gitignore
+├── frontend/                        # React UI
 │   ├── index.html
 │   ├── package.json
 │   ├── vite.config.js
 │   └── src/
-│       ├── App.jsx
+│       ├── App.jsx                  # Full React chat interface
 │       └── main.jsx
-├── static/                ← Built React files (generated by npm run build)
+├── static/                          # Built React files (git-committed)
 └── data/
     ├── tournaments.csv
     ├── players.csv
     ├── matches.csv
     ├── innings.csv
-    └── deliveries.csv
+    ├── deliveries.csv
+    ├── add_fielding_extras.sql      # Creates fielding_summary + extras_summary views
+    └── add_bowler_discipline.sql    # Creates bowler_discipline view
 ```
 
 ---
 
-## CLI commands
+## Database Schema
 
-| Type this | What happens |
-|---|---|
-| Any cricket question | Answered with a data table |
-| `help` | Shows example questions |
-| `sql` | Toggles showing the generated SQL |
-| `quit` | Exits |
+### Tables (5)
 
----
+- **players** — player_id, name, gender, date_of_birth, batting_style, bowling_style, player_role, district, age_group, is_wicket_keeper
+- **tournaments** — tournament_id, tournament_name, format (T20/ODI/FirstClass), gender, age_group, overs_per_innings, season
+- **matches** — match_id, tournament_id, tournament_name, match_date, venue, team1, team2, toss_winner, match_winner, win_margin
+- **innings** — innings_id, match_id, innings_number, batting_team, bowling_team, total_runs, total_wickets, total_overs, extras
+- **deliveries** — delivery_id, innings_id, over_number, ball_number, phase, batter_id, bowler_id, runs_scored, extras_runs, is_wicket, wicket_type, fielder_name, *[50+ columns for complete ball-by-ball analysis]*
 
-## Production data
+### Views (7)
 
-The `data/` folder contains **synthetic data** — statistically calibrated to match real domestic cricket benchmarks for development and testing.
-
-For production, replace it with real data from:
-- **ESPNcricinfo** — via a licensed data feed
-- **CricViz** — professional cricket analytics provider
-- **Association's own scoring system** — export from CricHQ, PlayCricket, or similar
-
-No code changes needed — replace the CSVs in `data/` and re-run `python3 load_data.py`.
+- **batting_summary** — batting stats per player/tournament (runs, strike rate, boundaries)
+- **bowling_summary** — bowling stats per player/tournament (wickets, economy rate, average)
+- **phase_batting** — batting by phase (powerplay/middle/death)
+- **phase_bowling** — bowling by phase
+- **fielding_summary** — catches, stumpings, run outs per fielder
+- **extras_summary** — wides, no balls, byes, leg byes per innings
+- **bowler_discipline** — indiscipline metrics (wides + no balls) per bowler
 
 ---
 
-## Troubleshooting
+## API Endpoints
 
-**Can't connect to the database**
-→ Make sure PostgreSQL is running. Check `DB_NAME=cricket_analytics_db` in `.env`.
+| Method | Path | Purpose |
+|--------|------|---------|
+| POST | `/api/query` | Send NL question → receive SQL + results |
+| GET | `/api/health` | Database connection status |
+| GET | `/api/browse/{view_name}` | Direct view query (bypass AI) |
+| GET | `/api/examples` | Example questions for UI |
+| GET | `/` | Serve React frontend |
 
-**401 Unauthorized**
-→ GitHub token expired. Generate a new one at github.com/marketplace/models.
+### Example Request
 
-**No results**
-→ Try a simpler question. Re-run `python3 load_data.py` to confirm data loaded.
+```bash
+curl -X POST http://localhost:8000/api/query \
+  -H "Content-Type: application/json" \
+  -d '{"question": "top 10 T20 batters by strike rate"}'
+```
 
-**502 Bad Gateway**
-→ FastAPI isn't running. Start uvicorn first, then reload Nginx (`sudo nginx -s reload`).
+### Example Response
 
-**Browser shows security warning on https://localhost**
-→ Expected with a self-signed certificate. Click Advanced → Proceed to continue.
+```json
+{
+  "sql": "SELECT batter_name, strike_rate FROM batting_summary WHERE format='T20' ORDER BY strike_rate DESC LIMIT 10",
+  "explanation": "Returns the top 10 batters in T20 format, sorted by strike rate in descending order.",
+  "assumptions": "Defaulted to T20 format. Minimum 20 balls faced applied.",
+  "results": [
+    {"batter_name": "Player A", "strike_rate": 185.5},
+    {"batter_name": "Player B", "strike_rate": 162.3},
+    ...
+  ]
+}
+```
 
-**npm run build fails**
-→ Run `rm -rf node_modules && npm install --legacy-peer-deps && npm run build` inside `frontend/`.
+---
+
+## Dataset
+
+**Synthetic, statistically calibrated to real domestic cricket:**
+
+- **235 players** (male + female, Senior/U25/U19/U16)
+- **11 tournaments** (Ranji, SMAT, VHT, U19, U16, Women's)
+- **88 matches** across T20, ODI, FirstClass formats
+- **~19,500 ball-by-ball deliveries**
+- **Season**: 2024-25
+- **Benchmarks**: Strike rates, economy rates, dismissal patterns match real domestic cricket
+
+---
+
+## How It Works
+
+1. **User types a question** in the web interface (or Python CLI): "Top left-arm spinners by economy in the powerplay"
+2. **Intent classifier** validates the question is in-scope (cricket-related)
+3. **Groq Llama 3.3 70B** (via Groq API) receives:
+   - Full database schema (tables, columns, views, aliases)
+   - The user's question
+   - System prompt with cricket terminology mappings
+4. **LLM generates SQL** (JSON format) with explanation + assumptions
+5. **sqlglot validator** ensures:
+   - Query is SELECT-only (no INSERT/UPDATE/DELETE)
+   - References only real tables/columns
+   - No SQL injection possible
+6. **PostgreSQL** executes the query (read-only connection)
+7. **Results** returned to user with:
+   - Data table (sortable, paginated)
+   - Leaderboard with 🥇🥈🥉 medals
+   - Underlying SQL (toggle-able)
+   - Groq's explanation + assumptions
+
+---
+
+## Configuration
+
+### Groq API
+
+Free tier limits: 1,000 requests/day, 30 requests/minute.
+
+Monitor usage in console.groq.com. For production, upgrade to a paid tier.
+
+**Model**: Llama 3.3 70B  
+**Temperature**: 0.0 (deterministic SQL generation)  
+**Max tokens**: 1024  
+**Response format**: JSON
+
+### Nginx
+
+Config at: `/opt/homebrew/etc/nginx/nginx.conf` (macOS with Homebrew)
+
+- Port 80 → redirects to HTTPS
+- Port 443 → SSL with self-signed cert at `~/.ssl/cricket/`
+- Security headers: X-Frame-Options, HSTS, X-Content-Type-Options
+- Proxies all traffic to FastAPI (127.0.0.1:8000)
+
+### PostgreSQL
+
+- **Host**: localhost:5432
+- **Database**: cricket_analytics_db
+- **User**: postgres
+- **Connection**: Read-only enforced (`default_transaction_read_only=on`)
+- **Manager**: TablePlus
+
+---
+
+## Known Issues & Workarounds
+
+### PostgreSQL Connection Failed
+
+**Error**: `FATAL: password authentication failed for user "postgres"`
+
+**Fix**: Ensure `DB_PASSWORD` in `.env` is correct. Verify in TablePlus connection settings.
+
+### Views Show "No Rows"
+
+**Error**: Browse data modal shows empty tables
+
+**Fix**: Rerun `data/add_fielding_extras.sql` and `data/add_bowler_discipline.sql` in TablePlus after data reload.
+
+### Groq Rate Limits
+
+**Error**: `429 Too Many Requests`
+
+**Fix**: Wait until midnight UTC for free tier reset, or upgrade to paid tier.
+
+### ngrok URL Changes
+
+**Issue**: Free ngrok URL changes every restart
+
+**Fix**: For production, use a real domain and Let's Encrypt SSL (see DEPLOYMENT.md).
+
+---
+
+## Deployment
+
+### Development (Current)
+
+- Nginx + ngrok for testing
+- Self-signed SSL
+- TablePlus for database management
+
+### Production (Documented in DEPLOYMENT.md)
+
+- Real domain (DNS) + Let's Encrypt SSL
+- Dedicated cloud server (AWS/GCP/Azure)
+- Paid Groq API tier (or alternative LLM)
+- Real, licensed match data
+- Persistent session history + logging
+
+---
+
+## Documents
+
+Updated documentation available in this folder:
+
+- **BRD_v2_UPDATED.md** — Business requirements and objectives
+- **FSD_v2_UPDATED.md** — Functional specifications and acceptance criteria
+- **Architecture_v2_Cricket_Analytics_PoC.docx** — Technical architecture (in progress)
+- **DEPLOYMENT.md** — Production deployment guide
+
+---
+
+## Contacts & Support
+
+- **Business Owner**: Sujit Kane
+- **Developer**: Anshul Dhote
+- **Colleague**: Sarang (platform evaluation)
+- **Organization**: Circullence
 
 ---
 
 ## License
 
-MIT — free to use, modify, and share. See `LICENSE` for details.
+Internal PoC. Not licensed for external distribution.
 
 ---
 
-*PoC for domestic cricket association scouting analytics. Designed to extend with real match data and deploy on Google Cloud or Azure.*
+## FAQ
+
+**Q: Can I use real ESPNcricinfo data?**  
+A: Not without explicit permission. Terms of service prohibit scraping. Synthetic data is calibrated to real benchmarks for PoC validation.
+
+**Q: What if I hit Groq API rate limits?**  
+A: Free tier resets at midnight UTC (1,000 requests/day). For immediate needs, upgrade to paid tier or switch to another LLM provider (OpenAI, Anthropic, etc.).
+
+**Q: How accurate is the LLM SQL generation?**  
+A: >95% accuracy on representative test cases (validated by Sujit Kane). All queries are validated with sqlglot before execution.
+
+**Q: Can coaches directly edit player data?**  
+A: No. The system is read-only. Data updates require administrator access and direct database queries.
+
+**Q: Is this production-ready?**  
+A: No. This is a PoC. Production requires real data, paid LLM tier, proper SSL, persistent logging, and multi-association support.
+
+---
+
+**Last Updated**: 2026-08-08  
+**Version**: 2.1 (Groq API)
