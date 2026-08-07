@@ -1,41 +1,30 @@
 """
-web_app.py — Cricket Analytics AI Agent
-FastAPI backend serving the React chat UI.
-
-Run with:
-    uvicorn web_app:app --host 0.0.0.0 --port 8000
-
-Or via Nginx (see DEPLOYMENT.md).
+web_app.py — FastAPI backend for Cricket Analytics
 """
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import os
-import traceback
 
 from config import validate, DB_NAME
 from database import test_connection, run_query
 from agent import CricketAgent
 
-# ── App setup ─────────────────────────────────────────────────
 app = FastAPI(
     title="Cricket Analytics AI Agent",
     description="Natural language cricket analytics powered by AI",
     version="1.0.0"
 )
 
-# Validate config on startup
 try:
     validate()
 except EnvironmentError as e:
     raise RuntimeError(f"Configuration error: {e}")
 
-# Initialize agent once at startup
 agent = CricketAgent()
 
 
-# ── Request/Response models ───────────────────────────────────
 class QueryRequest(BaseModel):
     question: str
 
@@ -52,10 +41,23 @@ class QueryResponse(BaseModel):
     error: str = ""
 
 
-# ── API Routes ────────────────────────────────────────────────
+def clean_rows(rows):
+    result = []
+    for row in rows:
+        clean = {}
+        for k, v in row.items():
+            if v is None:
+                clean[k] = None
+            elif isinstance(v, float):
+                clean[k] = round(v, 2)
+            else:
+                clean[k] = str(v) if not isinstance(v, (int, bool)) else v
+        result.append(clean)
+    return result
+
+
 @app.get("/api/health")
 def health_check():
-    """Health check endpoint."""
     db_ok = test_connection()
     return {
         "status": "ok" if db_ok else "degraded",
@@ -64,20 +66,35 @@ def health_check():
     }
 
 
+@app.get("/api/browse/{view_name}")
+def browse_view(view_name: str):
+    allowed = [
+        "batting_summary", "bowling_summary",
+        "phase_batting", "phase_bowling",
+        "fielding_summary", "extras_summary", "bowler_discipline"
+    ]
+    if view_name not in allowed:
+        raise HTTPException(status_code=400, detail=f"View '{view_name}' not allowed.")
+    try:
+        rows, columns = run_query(f"SELECT * FROM {view_name} LIMIT 100")
+        return {
+            "success": True,
+            "columns": columns,
+            "rows": clean_rows(rows),
+            "row_count": len(rows)
+        }
+    except Exception as e:
+        return {"success": False, "columns": [], "rows": [], "error": str(e)}
+
+
 @app.post("/api/query", response_model=QueryResponse)
 def query(req: QueryRequest):
-    """
-    Main query endpoint.
-    Accepts a natural language question, returns SQL results.
-    """
     question = req.question.strip()
     if not question:
         raise HTTPException(status_code=400, detail="Question cannot be empty")
 
-    # Step 1: AI translates question to SQL
     result = agent.ask(question)
 
-    # Step 2: Handle non-proceed intents
     if result["intent"] in ("out_of_scope", "external", "unanswerable"):
         return QueryResponse(
             success=False,
@@ -93,30 +110,16 @@ def query(req: QueryRequest):
             intent=result["intent"],
         )
 
-    # Step 3: Execute the validated SQL
     try:
         rows, columns = run_query(result["sql"])
-        # Convert any non-serializable types to strings
-        clean_rows = []
-        for row in rows:
-            clean_row = {}
-            for k, v in row.items():
-                if v is None:
-                    clean_row[k] = None
-                elif isinstance(v, float):
-                    clean_row[k] = round(v, 2)
-                else:
-                    clean_row[k] = str(v) if not isinstance(v, (int, bool)) else v
-            clean_rows.append(clean_row)
-
         return QueryResponse(
             success=True,
             explanation=result["explanation"],
             assumptions=result.get("assumptions") or "",
             sql=result["sql"],
             columns=columns,
-            rows=clean_rows,
-            row_count=len(clean_rows),
+            rows=clean_rows(rows),
+            row_count=len(rows),
             intent="proceed",
         )
     except Exception as e:
@@ -130,16 +133,15 @@ def query(req: QueryRequest):
 
 @app.get("/api/examples")
 def get_examples():
-    """Returns example questions for the UI."""
     return {
         "examples": [
             "Top 10 T20 batters by strike rate this season",
             "Which bowlers have the best economy in the powerplay?",
             "Top U19 female batters by total runs",
-            "Best leg-spin bowlers in SMAT by wickets taken",
             "Who took the most catches this season?",
-            "Which bowling teams give the most wides and no balls?",
+            "Best leg-spin bowlers in SMAT by wickets taken",
             "Top all-rounders by runs and wickets combined",
+            "Which teams give the most wides?",
             "Best death-over bowlers by dot ball percentage",
             "Which districts produce the most players?",
             "Top-order batters with boundary percentage over 20 in T20",
@@ -147,11 +149,12 @@ def get_examples():
     }
 
 
-# ── Serve React frontend ──────────────────────────────────────
-# Mount static files if the built frontend exists
+# Serve React frontend
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
 if os.path.isdir(STATIC_DIR):
-    app.mount("/assets", StaticFiles(directory=os.path.join(STATIC_DIR, "assets")), name="assets")
+    assets_dir = os.path.join(STATIC_DIR, "assets")
+    if os.path.isdir(assets_dir):
+        app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
 
     @app.get("/")
     def serve_frontend():
@@ -159,7 +162,6 @@ if os.path.isdir(STATIC_DIR):
 
     @app.get("/{path:path}")
     def serve_spa(path: str):
-        # Serve index.html for all non-API routes (React Router support)
         if path.startswith("api/"):
             raise HTTPException(status_code=404)
         index = os.path.join(STATIC_DIR, "index.html")

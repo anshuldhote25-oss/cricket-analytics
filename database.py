@@ -1,7 +1,5 @@
 """
 database.py — PostgreSQL connection and query execution
-Read-only access only. Connection uses a context manager
-so it closes cleanly after every query.
 """
 import psycopg2
 import psycopg2.extras
@@ -9,7 +7,6 @@ from config import DB_HOST, DB_PORT, DB_NAME, DB_USER, DB_PASSWORD
 
 
 def get_connection():
-    """Open a new PostgreSQL connection."""
     return psycopg2.connect(
         host=DB_HOST,
         port=DB_PORT,
@@ -17,17 +14,11 @@ def get_connection():
         user=DB_USER,
         password=DB_PASSWORD,
         connect_timeout=10,
-        options="-c default_transaction_read_only=on"  # enforce read-only at DB level
+        options="-c default_transaction_read_only=on"
     )
 
 
 def run_query(sql: str) -> tuple[list[dict], list[str]]:
-    """
-    Execute a SELECT query and return:
-      - rows: list of dicts (column_name -> value)
-      - columns: list of column names in order
-    Raises on any error.
-    """
     conn = None
     try:
         conn = get_connection()
@@ -42,7 +33,6 @@ def run_query(sql: str) -> tuple[list[dict], list[str]]:
 
 
 def test_connection() -> bool:
-    """Returns True if the database is reachable."""
     try:
         conn = get_connection()
         conn.close()
@@ -52,9 +42,6 @@ def test_connection() -> bool:
         return False
 
 
-# The full schema context sent to the LLM with every query.
-# This is what keeps the LLM grounded — it can only reference
-# tables and columns that actually exist.
 SCHEMA_CONTEXT = """
 You are a cricket analytics SQL expert. The database is PostgreSQL.
 

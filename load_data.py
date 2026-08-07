@@ -1,13 +1,5 @@
 """
-load_data.py — Cricket Analytics DB Data Loader
-================================================
-Loads all CSV files into PostgreSQL in the correct order,
-handling data types properly. Run this once after schema.sql.
-
-Usage:
-    python3 load_data.py
-
-Make sure your .env file is configured before running.
+load_data.py — Load CSV data into PostgreSQL
 """
 import os
 import csv

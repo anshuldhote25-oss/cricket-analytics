@@ -1,18 +1,19 @@
+"""
+agent.py — Natural language to SQL translation via Groq API
+"""
 import json
 import re
 from openai import OpenAI
-from config import GITHUB_TOKEN
+from config import GROQ_API_KEY
 from database import SCHEMA_CONTEXT
 from validator import validate_sql, ValidationError
 
-# unrelated questions
 OUT_OF_SCOPE_PATTERNS = [
     r'\bweather\b', r'\bstock\b', r'\bfinance\b', r'\bnews\b',
     r'\bpolitics?\b', r'\brecipe\b', r'\btravel\b', r'\bmovie\b',
     r'\bsong\b', r'\bpoem\b',
 ]
 
-# unanswerable related questions
 EXTERNAL_DATA_PATTERNS = [
     r'\bipl\b', r'\bworld\s*cup\b', r'\binternational\b',
     r'\bnational\s+team\b',
@@ -43,20 +44,17 @@ def classify_intent(question: str) -> tuple:
 class CricketAgent:
     def __init__(self):
         self.client = OpenAI(
-            base_url="https://models.inference.ai.azure.com",
-            api_key=GITHUB_TOKEN,
+            base_url="https://api.groq.com/openai/v1",
+            api_key=GROQ_API_KEY,
         )
-        self.model = "gpt-4o-mini"
+        self.model = "llama-3.3-70b-versatile"
 
     def ask(self, question: str) -> dict:
         intent, message = classify_intent(question)
         if intent != "proceed":
             return {
-                "sql": None,
-                "explanation": message,
-                "assumptions": None,
-                "error": None,
-                "intent": intent,
+                "sql": None, "explanation": message,
+                "assumptions": None, "error": None, "intent": intent,
             }
 
         try:
@@ -66,24 +64,15 @@ class CricketAgent:
                 max_tokens=1024,
                 response_format={"type": "json_object"},
                 messages=[
-                    {
-                        "role": "system",
-                        "content": SCHEMA_CONTEXT,
-                    },
-                    {
-                        "role": "user",
-                        "content": question,
-                    }
+                    {"role": "system", "content": SCHEMA_CONTEXT},
+                    {"role": "user", "content": question}
                 ]
             )
             raw = response.choices[0].message.content.strip()
         except Exception as e:
             return {
-                "sql": None,
-                "explanation": None,
-                "assumptions": None,
-                "error": f"API error: {e}",
-                "intent": "error",
+                "sql": None, "explanation": None, "assumptions": None,
+                "error": f"API error: {e}", "intent": "error",
             }
 
         try:
@@ -92,23 +81,18 @@ class CricketAgent:
             result = json.loads(raw)
         except json.JSONDecodeError as e:
             return {
-                "sql": None,
-                "explanation": f"Could not parse AI response: {e}",
-                "assumptions": None,
-                "error": raw,
-                "intent": "error",
+                "sql": None, "explanation": f"Could not parse AI response: {e}",
+                "assumptions": None, "error": raw, "intent": "error",
             }
 
-        sql         = result.get("sql")
+        sql = result.get("sql")
         explanation = result.get("explanation", "")
         assumptions = result.get("assumptions", "")
 
         if not sql:
             return {
-                "sql": None,
-                "explanation": explanation,
-                "assumptions": assumptions,
-                "error": None,
+                "sql": None, "explanation": explanation,
+                "assumptions": assumptions, "error": None,
                 "intent": "unanswerable",
             }
 
@@ -116,17 +100,13 @@ class CricketAgent:
             sql = validate_sql(sql)
         except ValidationError as e:
             return {
-                "sql": None,
-                "explanation": explanation,
+                "sql": None, "explanation": explanation,
                 "assumptions": assumptions,
                 "error": f"SQL validation failed: {e}",
                 "intent": "validation_error",
             }
 
         return {
-            "sql": sql,
-            "explanation": explanation,
-            "assumptions": assumptions,
-            "error": None,
-            "intent": "proceed",
+            "sql": sql, "explanation": explanation,
+            "assumptions": assumptions, "error": None, "intent": "proceed",
         }
