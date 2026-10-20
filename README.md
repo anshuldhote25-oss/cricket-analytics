@@ -8,7 +8,7 @@ An AI-powered conversational interface for cricket scouting analytics. Query bal
 
 ## Overview
 
-Selectors, coaches, and scouts can now ask complex scouting questions in plain English and receive data-backed answers instantly. No SQL knowledge required.
+Selectors, coaches, and scouts can now ask complex scouting questions in plain English — or in **Hindi and Marathi, typed in Devanagari or in Roman letters** — and receive data-backed answers instantly. No SQL knowledge required.
 
 **Example questions:**
 - "Top 10 T20 batters by strike rate"
@@ -16,6 +16,9 @@ Selectors, coaches, and scouts can now ask complex scouting questions in plain E
 - "Best fielders in SMAT tournament"
 - "Catches taken per district in Ranji Trophy"
 - "Bowlers with most indiscipline (wides + no balls) in death overs"
+- "T20 में स्ट्राइक रेट के हिसाब से टॉप 10 बल्लेबाज़" *(Hindi)*
+- "powerplay mein sabse acchi economy wale gendbaaz dikhao" *(Hindi, Roman letters)*
+- "powerplay madhe sarvottam economy asleale golandaj dakhva" *(Marathi, Roman letters)*
 
 ---
 
@@ -29,6 +32,7 @@ Selectors, coaches, and scouts can now ask complex scouting questions in plain E
 | **Web Server** | Nginx with self-signed SSL |
 | **Public Access** | ngrok (PoC testing) |
 | **SQL Validation** | sqlglot (SELECT-only enforcement) |
+| **Multilingual NLP** | Custom pipeline in `nlp/` (pure Python): language ID, phonetic matching, gazetteer NER, Naive Bayes intents |
 | **Database Manager** | TablePlus |
 
 ---
@@ -105,7 +109,8 @@ Visit: `http://localhost` (local) or `https://<ngrok-url>` (public testing)
 cricket-analytics/
 ├── main.py                          # CLI entry point
 ├── web_app.py                       # FastAPI backend + static file serving
-├── agent.py                         # Groq API call, NL→SQL translation
+├── agent.py                         # Groq API call, NL→SQL translation (uses nlp/ first)
+├── nlp/                             # Multilingual NLP front-end — see nlp/README.md
 ├── database.py                      # PostgreSQL connection, schema context
 ├── validator.py                     # SQL safety validation (sqlglot)
 ├── config.py                        # .env loader
@@ -164,6 +169,7 @@ cricket-analytics/
 | Method | Path | Purpose |
 |--------|------|---------|
 | POST | `/api/query` | Send NL question → receive SQL + results |
+| POST | `/api/analyze` | NLP analysis only (language, entities, intent) — no LLM, no DB |
 | GET | `/api/health` | Database connection status |
 | GET | `/api/browse/{view_name}` | Direct view query (bypass AI) |
 | GET | `/api/examples` | Example questions for UI |
@@ -210,7 +216,7 @@ curl -X POST http://localhost:8000/api/query \
 ## How It Works
 
 1. **User types a question** in the web interface (or Python CLI): "Top left-arm spinners by economy in the powerplay"
-2. **Intent classifier** validates the question is in-scope (cricket-related)
+2. **Multilingual NLP pipeline** (`nlp/`) detects the language/script (English, Hindi, Marathi, or either typed in Roman letters), normalises the text, extracts cricket entities (phase, format, bowler type, district, player ...) and numeric thresholds, classifies the intent, and answers greetings / out-of-scope / non-dataset questions locally in the user's own language
 3. **Groq Llama 3.3 70B** (via Groq API) receives:
    - Full database schema (tables, columns, views, aliases)
    - The user's question
@@ -230,6 +236,19 @@ curl -X POST http://localhost:8000/api/query \
 ---
 
 ## Configuration
+
+### Choosing the LLM provider
+
+Any OpenAI-compatible API works. Set these in `.env` (defaults = Groq):
+
+```env
+LLM_API_KEY=...            # falls back to GROQ_API_KEY if not set
+LLM_BASE_URL=https://api.groq.com/openai/v1
+LLM_MODEL=llama-3.3-70b-versatile
+LLM_MAX_TOKENS=2048
+```
+
+Google Gemini example: `LLM_BASE_URL=https://generativelanguage.googleapis.com/v1beta/openai/` with a key from aistudio.google.com and a model name from AI Studio.
 
 ### Groq API
 

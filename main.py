@@ -28,6 +28,9 @@ def print_help():
         "Best death-over bowlers by dot ball percentage",
         "Top 5 wicket-keepers by runs scored",
         "Which districts produce the most runs in domestic cricket?",
+        "T20 mein strike rate ke hisab se top 10 ballebaaz          (Hindi, Roman letters)",
+        "powerplay madhe sarvottam economy asleale golandaj dakhva   (Marathi, Roman letters)",
+        "या हंगामात सर्वात जास्त झेल कोणी घेतले                        (Marathi, Devanagari)",
     ]
     print(Fore.YELLOW + "\n  Example questions:")
     for i, ex in enumerate(examples, 1):
@@ -145,7 +148,14 @@ def main():
 
         result = agent.ask(question)
 
-        if result["intent"] in ("out_of_scope", "external", "unanswerable"):
+        nlp_info = result.get("nlp") or {}
+        if nlp_info.get("language") and result["intent"] != "greeting":
+            line = f"Language: {nlp_info['language_label']}"
+            if nlp_info.get("interpreted_as"):
+                line += f"   |   Understood as: {nlp_info['interpreted_as']}"
+            print(Fore.MAGENTA + f"  🌐 {line}")
+
+        if result["intent"] in ("out_of_scope", "external", "unanswerable", "greeting"):
             print_info(result["explanation"])
             continue
 

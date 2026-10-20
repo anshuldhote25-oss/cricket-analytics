@@ -1,0 +1,773 @@
+text,intent,lang
+how many matches were played in Vijay Hazare Trophy,general,en
+mahila khelaadunmadhe sarvat jast run out konni kele,fielding,mr-Latn
+विजय हजारे में कितने मैच खेले गए,general,hi
+which all-rounders are best in Syed Mushtaq Ali,allrounder,en
+off spin golandajanpaiki konni sarvat jast bali ghetle,bowling,mr-Latn
+dhava ani bali nusar top 10 ashtapailu,allrounder,mr-Latn
+डेथ ओव्हर मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,discipline,mr
+please book a flight to delhi,out_of_scope,en
+can you tell most sixes in Vijay Hazare Trophy,batting,en
+स्टंपिंग के हिसाब से टॉप 10 विकेटकीपर,fielding,hi
+रणजी में कितने मैच खेले गए,general,hi
+senior male bowlers with economy under 6,bowling,en
+please gane aikva,out_of_scope,mr-Latn
+भाई नमस्ते,greeting,hi
+who scored the most runs in IPL,external_data,en
+hello kasa aahes,greeting,mr-Latn
+please koi achhi movie batao,out_of_scope,hi-Latn
+ek minute python kase shikave,out_of_scope,mr-Latn
+मित्रा एक जोक सांगा,out_of_scope,mr
+कृपया गाना सुनाओ,out_of_scope,hi
+can you tell test match best batters,external_data,en
+hey U16 female all-rounders with strike rate above 130,allrounder,en
+कोणता संघ सर्वात जास्त नो बॉल टाकतो,discipline,mr
+help,greeting,en
+कृपया T20 मध्ये बाउंड्री टक्केवारी 25 पेक्षा जास्त असलेले फलंदाज सांगा,batting,mr
+dhoni che stumping,external_data,mr-Latn
+Vijay Hazare mein kitne match khele gaye,general,hi-Latn
+can you tell recipe for pasta,out_of_scope,en
+most wickets taken in Ranji Trophy,bowling,en
+which all-rounders are best in Ranji Trophy,allrounder,en
+top order falandaj jyancha strike rate sarvottam aahe,batting,mr-Latn
+विजय हजारे के सबसे अच्छे फील्डर दिखाओ,fielding,hi
+sarvat beshist golandaj kon aahet,discipline,mr-Latn
+please chunav ke nateeje kya hain,out_of_scope,hi-Latn
+first class mein dot ball percentage ke hisab se sabse acche gendbaaz,bowling,hi-Latn
+धावा आणि बळी नुसार टॉप 5 अष्टपैलू,allrounder,mr
+powerplay madhe sarvottam economy asleale golandaj dakhva,bowling,mr-Latn
+कृपया किस टीम ने सबसे ज़्यादा मैच जीते,general,hi
+मित्रा पुरणपोळीची रेसिपी सांग,out_of_scope,mr
+off spin gendbaaz kaun hain jinhone sabse zyada wicket liye,bowling,hi-Latn
+वनडे में सबसे ज़्यादा एक्स्ट्रा देने वाले गेंदबाज़ बताओ,discipline,hi
+bhai python kaise seekhe,out_of_scope,hi-Latn
+hey test match best batters,external_data,en
+mitra dhava ani bali nusar top 5 ashtapailu,allrounder,mr-Latn
+best fielders in Ranji Trophy,fielding,en
+senior khelaadunmadhe sarvat jast run out konni kele,fielding,mr-Latn
+धावा आणि बळी नुसार टॉप 3 अष्टपैलू,allrounder,mr
+कृपया इस सीज़न में सबसे ज़्यादा कैच किसने लिए,fielding,hi
+धोनीचे स्टंपिंग,external_data,mr
+कृपया एक जोक सांगा,out_of_scope,mr
+please share bajarachi batmi sanga,out_of_scope,mr-Latn
+अंतरराष्ट्रीय क्रिकेट में सबसे ज़्यादा विकेट,external_data,hi
+bowlers with most extras in Ranji Trophy,discipline,en
+can you tell virat kohli strike rate,external_data,en
+top 5 all-rounders by runs and wickets,allrounder,en
+hey best movies to watch,out_of_scope,en
+U16 ladkiyon ke gendbaaz jinki economy 6 se kam ho,bowling,hi-Latn
+please hi kaise ho,greeting,hi-Latn
+कृपया पनीर की रेसिपी बताओ,out_of_scope,hi
+please test match best batters,external_data,en
+मित्रा आंतरराष्ट्रीय क्रिकेटमध्ये सर्वाधिक बळी,external_data,mr
+भाई इस सीज़न में सबसे ज़्यादा कैच किसने लिए,fielding,hi
+please world cup top bowlers,external_data,en
+please madat kara,greeting,mr-Latn
+भाई जिले के हिसाब से कुल रन दिखाओ,general,hi
+leg spin gendbaaz kaun hain jinhone sabse zyada wicket liye,bowling,hi-Latn
+भाई पायथन कैसे सीखें,out_of_scope,hi
+T20 के सबसे अच्छे ऑलराउंडर दिखाओ,allrounder,hi
+tell me a joke,out_of_scope,en
+मित्रा आज हवामान कसे आहे,out_of_scope,mr
+T20 batters with boundary percentage over 30,batting,en
+T20 में सबसे ज़्यादा एक्स्ट्रा देने वाले गेंदबाज़ बताओ,discipline,hi
+गाना सुनाओ,out_of_scope,hi
+please share bazaar ki khabar batao,out_of_scope,hi-Latn
+मित्रा रणजी मध्ये सर्वाधिक षटकार कोणी मारले,batting,mr
+please delhi ki flight book karo,out_of_scope,hi-Latn
+namaskar,greeting,mr-Latn
+मित्रा फर्स्ट क्लास मध्ये सर्वाधिक एक्स्ट्रा देणारे गोलंदाज सांगा,discipline,mr
+ek minute hello kasa aahes,greeting,mr-Latn
+रणजी मध्ये किती सामने खेळले गेले,general,mr
+india international team stats,external_data,en
+आज मौसम कैसा है,out_of_scope,hi
+कृपया फ्रान्सची राजधानी कोणती आहे,out_of_scope,mr
+bowlers with the most wides in powerplay,discipline,en
+मित्रा पॉवरप्ले मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,discipline,mr
+can you tell world cup top bowlers,external_data,en
+Amravati madhe sarvat jast zel,fielding,mr-Latn
+middle over madhe sarvottam falandaj dakhva,batting,mr-Latn
+सय्यद मुश्ताक अली मध्ये सर्वाधिक षटकार कोणी मारले,batting,mr
+ek minute kay challay,greeting,mr-Latn
+zara madad karo,greeting,hi-Latn
+शेअर बाजाराची बातमी सांगा,out_of_scope,mr
+senior golandaj jyanchi economy 6 peksha kami aahe,bowling,mr-Latn
+please bowlers with the most wides in middle overs,discipline,en
+ek minute aaj havaman kase aahe,out_of_scope,mr-Latn
+top 10 left-arm orthodox bowlers by wickets in Syed Mushtaq Ali,bowling,en
+best fielders in Syed Mushtaq Ali,fielding,en
+please share market news today,out_of_scope,en
+middle over mein sabse acche ballebaaz dikhao,batting,hi-Latn
+france ki rajdhani kya hai,out_of_scope,hi-Latn
+hey tell me a joke,out_of_scope,en
+paneer ki recipe batao,out_of_scope,hi-Latn
+नमस्कार कसे आहात,greeting,mr
+ek minute IPL madhe sarvat jast dhava konni kelya,external_data,mr-Latn
+please Vijay Hazare mein sabse behtar allrounder kaun hai,allrounder,hi-Latn
+१९ वर्षांखालील गोलंदाज ज्यांची इकॉनॉमी 8 पेक्षा कमी आहे,bowling,mr
+सय्यद मुश्ताक अली मधील सर्वोत्तम क्षेत्ररक्षक दाखवा,fielding,mr
+python kase shikave,out_of_scope,mr-Latn
+top 5 leg-spin bowlers by wickets in Vijay Hazare Trophy,bowling,en
+रणजी में सबसे बेहतर ऑलराउंडर कौन है,allrounder,hi
+SMAT mein sabse zyada wicket lene wale top 5 gendbaaz,bowling,hi-Latn
+फर्स्ट क्लास के सबसे अच्छे ऑलराउंडर दिखाओ,allrounder,hi
+please hello,greeting,en
+कृपया आंतरराष्ट्रीय क्रिकेटमध्ये सर्वाधिक बळी,external_data,mr
+वनडे में स्ट्राइक रेट के हिसाब से टॉप 3 बल्लेबाज़,batting,hi
+please india international team stats,external_data,en
+please what is the weather today,out_of_scope,en
+zara chunav ke nateeje kya hain,out_of_scope,hi-Latn
+write a poem about rain,out_of_scope,en
+gaana sunao,out_of_scope,hi-Latn
+namaste kaise ho,greeting,hi-Latn
+run aur wicket ke hisab se top 3 allrounder,allrounder,hi-Latn
+पॉवरप्ले मध्ये सर्वोत्तम इकॉनॉमी असलेले गोलंदाज दाखवा,bowling,mr
+ODI batters with boundary percentage over 30,batting,en
+mitra T20 madhe boundary percentage 20 peksha jast asleale falandaj sanga,batting,mr-Latn
+please SMAT madhe kiti samane khelle gele,general,mr-Latn
+please python kaise seekhe,out_of_scope,hi-Latn
+mitra antararashtriya cricket madhe sarvat jast bali,external_data,mr-Latn
+ODI madhil sarvottam ashtapailu khelaadu dakhva,allrounder,mr-Latn
+hello,greeting,en
+कृपया निवडणुकीचे निकाल काय आहेत,out_of_scope,mr
+नमस्ते,greeting,hi
+bhai international cricket mein sabse zyada wicket,external_data,hi-Latn
+U19 golandaj jyanchi economy 8 peksha kami aahe,bowling,mr-Latn
+मित्रा पायथन कसे शिकावे,out_of_scope,mr
+death over mein sabse acchi economy wale gendbaaz dikhao,bowling,hi-Latn
+powerplay mein sabse acche ballebaaz dikhao,batting,hi-Latn
+विजय हजारे में सबसे ज़्यादा विकेट लेने वाले टॉप 5 गेंदबाज़,bowling,hi
+please aaj mausam kaisa hai,out_of_scope,hi-Latn
+hey what is the weather today,out_of_scope,en
+कसा आहेस,greeting,mr
+फर्स्ट क्लास में सबसे ज़्यादा एक्स्ट्रा देने वाले गेंदबाज़ बताओ,discipline,hi
+कृपया विराट कोहलीचा स्ट्राइक रेट सांगा,external_data,mr
+hey world cup top bowlers,external_data,en
+how many matches were played in Syed Mushtaq Ali,general,en
+please Mushtaq Ali madhe kiti samane khelle gele,general,mr-Latn
+hey virat kohli strike rate,external_data,en
+SMAT madhe sarvat jast shatkar konni marle,batting,mr-Latn
+powerplay madhe sarvat jast wide ball takanare golandaj,discipline,mr-Latn
+भाई धोनी के स्टंपिंग,external_data,hi
+can you tell tell me a joke,out_of_scope,en
+विजय हजारे मधील सर्वोत्तम क्षेत्ररक्षक दाखवा,fielding,mr
+मित्रा हॅलो,greeting,mr
+Vijay Hazare madhe sarvat jast bali ghenare top 10 golandaj,bowling,mr-Latn
+Ranji madhe sarvat jast bali ghenare top 5 golandaj,bowling,mr-Latn
+please namaskar,greeting,hi-Latn
+mitra madat kara,greeting,mr-Latn
+share market news today,out_of_scope,en
+top order ballebaaz jinka strike rate sabse acha ho,batting,hi-Latn
+hello bhai,greeting,hi-Latn
+Nagpur madhe sarvat jast zel,fielding,mr-Latn
+please best movies to watch,out_of_scope,en
+mitra aaj havaman kase aahe,out_of_scope,mr-Latn
+कृपया विजय हजारे में सबसे बेहतर ऑलराउंडर कौन है,allrounder,hi
+bhai dhoni ke stumping,external_data,hi-Latn
+Wardha mein sabse zyada catch,fielding,hi-Latn
+विजय हजारे मध्ये सर्वोत्तम अष्टपैलू कोण आहे,allrounder,mr
+कृपया IPL मध्ये सर्वात जास्त धावा कोणी केल्या,external_data,mr
+कृपया धोनीचे स्टंपिंग,external_data,mr
+ek joke sanga,out_of_scope,mr-Latn
+top 5 wicket-keepers by stumpings,fielding,en
+एकदिवसीय मध्ये सर्वाधिक एक्स्ट्रा देणारे गोलंदाज सांगा,discipline,mr
+विजय हजारे में सबसे ज़्यादा रन किसने बनाए,batting,hi
+test match best batters,external_data,en
+सय्यद मुश्ताक अली में सबसे ज़्यादा विकेट लेने वाले टॉप 10 गेंदबाज़,bowling,hi
+first class madhe sarvat jast extras denare golandaj sanga,discipline,mr-Latn
+please namaste kaise ho,greeting,hi-Latn
+puranpolichi recipe sang,out_of_scope,mr-Latn
+recipe for pasta,out_of_scope,en
+एकदिवसीय मध्ये डॉट बॉल नुसार सर्वोत्तम गोलंदाज,bowling,mr
+bhai Ranji mein kitne match khele gaye,general,hi-Latn
+T20 madhe sarvat jast extras denare golandaj sanga,discipline,mr-Latn
+mitra python kase shikave,out_of_scope,mr-Latn
+bowlers with most extras in Vijay Hazare Trophy,discipline,en
+bhai share bazaar ki khabar batao,out_of_scope,hi-Latn
+विजय हजारे मध्ये सर्वात जास्त बळी घेणारे टॉप 7 गोलंदाज,bowling,mr
+please IPL mein sabse zyada run kisne banaye,external_data,hi-Latn
+कृपया विजय हजारे मध्ये किती सामने खेळले गेले,general,mr
+please T20 ke sabse acche allrounder dikhao,allrounder,hi-Latn
+please dilli sathi flight book kara,out_of_scope,mr-Latn
+mitra dilli sathi flight book kara,out_of_scope,mr-Latn
+please france ki rajdhani kya hai,out_of_scope,hi-Latn
+सय्यद मुश्ताक अली में कितने मैच खेले गए,general,hi
+bhai leg spin gendbaaz kaun hain jinhone sabse zyada wicket liye,bowling,hi-Latn
+मित्रा एखादा चांगला चित्रपट सांगा,out_of_scope,mr
+middle over madhe sarvat jast wide ball takanare golandaj,discipline,mr-Latn
+ek minute vishwachashakatil top golandaj,external_data,mr-Latn
+रणजी मध्ये सर्वात जास्त बळी घेणारे टॉप 7 गोलंदाज,bowling,mr
+zara koi achhi movie batao,out_of_scope,hi-Latn
+Akola che sarvat jast dhava kelele falandaj,batting,mr-Latn
+catches taken per district in Syed Mushtaq Ali,fielding,en
+which districts produce the most players,general,en
+first class madhe strike rate nusar top 5 falandaj,batting,mr-Latn
+मित्रा IPL मध्ये सर्वात जास्त धावा कोणी केल्या,external_data,mr
+how to learn python,out_of_scope,en
+can you tell translate this sentence,out_of_scope,en
+मित्रा कसा आहेस,greeting,mr
+जिले के हिसाब से कुल रन दिखाओ,general,hi
+स्टंपिंग के हिसाब से टॉप 7 विकेटकीपर,fielding,hi
+कृपया T20 में बाउंड्री प्रतिशत 20 से ज़्यादा वाले बल्लेबाज़ बताओ,batting,hi
+dhava ani bali nusar top 5 ashtapailu,allrounder,mr-Latn
+can you tell help,greeting,en
+रन और विकेट के हिसाब से टॉप 3 ऑलराउंडर,allrounder,hi
+नमस्कार,greeting,hi
+ek minute francechi rajdhani konti aahe,out_of_scope,mr-Latn
+सय्यद मुश्ताक अली मध्ये सर्वात जास्त धावा कोणी केल्या,batting,mr
+कृपया स्टंपिंग के हिसाब से टॉप 5 विकेटकीपर,fielding,hi
+कृपया मदत करा,greeting,mr
+please madad karo,greeting,hi-Latn
+bhai namaste kaise ho,greeting,hi-Latn
+francechi rajdhani konti aahe,out_of_scope,mr-Latn
+please run aur wicket ke hisab se top 5 allrounder,allrounder,hi-Latn
+zara virat kohli ka strike rate batao,external_data,hi-Latn
+please run aur wicket ke hisab se top 7 allrounder,allrounder,hi-Latn
+Ranji madhe kiti samane khelle gele,general,mr-Latn
+please kaun si team sabse zyada no ball deti hai,discipline,hi-Latn
+please namaste,greeting,hi-Latn
+किस टीम ने सबसे ज़्यादा मैच जीते,general,hi
+कोणत्या संघाने सर्वात जास्त सामने जिंकले,general,mr
+भाई कोई अच्छी फिल्म बताओ,out_of_scope,hi
+Akola mein sabse zyada catch,fielding,hi-Latn
+कृपया शेअर बाजाराची बातमी सांगा,out_of_scope,mr
+please virat kohli cha strike rate sanga,external_data,mr-Latn
+कृपया नमस्ते,greeting,hi
+नागपूर चे सर्वात जास्त धावा करणारे फलंदाज,batting,mr
+hey how many matches were played in Ranji Trophy,general,en
+मदत करा,greeting,mr
+T20 मध्ये स्ट्राइक रेटनुसार टॉप 3 फलंदाज,batting,mr
+zara namaste,greeting,hi-Latn
+कृपया वर्ल्ड कप के टॉप गेंदबाज़,external_data,hi
+Mushtaq Ali mein kitne match khele gaye,general,hi-Latn
+first class madhe dot ball percentage nusar sarvottam golandaj,bowling,mr-Latn
+स्टंपिंगनुसार टॉप 3 यष्टिरक्षक,fielding,mr
+ek minute dilli sathi flight book kara,out_of_scope,mr-Latn
+please which bowlers have the best economy in the death overs,bowling,en
+madad karo,greeting,hi-Latn
+zara international cricket mein sabse zyada wicket,external_data,hi-Latn
+zara IPL mein sabse zyada run kisne banaye,external_data,hi-Latn
+ODI mein sabse zyada extras dene wale gendbaaz batao,discipline,hi-Latn
+hey hi,greeting,en
+bhai hi kaise ho,greeting,hi-Latn
+कृपया डेथ ओवर में सबसे ज़्यादा वाइड डालने वाले गेंदबाज़,discipline,hi
+who scored the most runs in Syed Mushtaq Ali,batting,en
+middle over mein sabse acchi economy wale gendbaaz dikhao,bowling,hi-Latn
+hey hello,greeting,en
+IPL में सबसे ज़्यादा रन किसने बनाए,external_data,hi
+कृपया धोनी के स्टंपिंग,external_data,hi
+mitra powerplay madhe sarvottam falandaj dakhva,batting,mr-Latn
+please paneer ki recipe batao,out_of_scope,hi-Latn
+international cricket mein sabse zyada wicket,external_data,hi-Latn
+madat kara,greeting,mr-Latn
+mitra namaskar mitra,greeting,mr-Latn
+which all-rounders are best in SMAT,allrounder,en
+top 5 left-arm orthodox bowlers by wickets in Ranji Trophy,bowling,en
+ODI mein strike rate ke hisab se top 7 ballebaaz,batting,hi-Latn
+स्टंपिंग के हिसाब से टॉप 5 विकेटकीपर,fielding,hi
+koi achhi movie batao,out_of_scope,hi-Latn
+एक जोक सांगा,out_of_scope,mr
+16 वर्षांखालील मुली गोलंदाज ज्यांची इकॉनॉमी 6 पेक्षा कमी आहे,bowling,mr
+मित्रा जिल्ह्यानुसार एकूण धावा दाखवा,general,mr
+भाई नमस्कार,greeting,hi
+एखादा चांगला चित्रपट सांगा,out_of_scope,mr
+डेथ ओवर में सबसे अच्छी इकॉनमी वाले गेंदबाज़ दिखाओ,bowling,hi
+T20 में स्ट्राइक रेट के हिसाब से टॉप 3 बल्लेबाज़,batting,hi
+can you tell book a flight to delhi,out_of_scope,en
+hey hello how are you,greeting,en
+ek minute T20 madhe sarvat jast extras denare golandaj sanga,discipline,mr-Latn
+कोई अच्छी फिल्म बताओ,out_of_scope,hi
+कृपया रणजी मध्ये सर्वोत्तम अष्टपैलू कोण आहे,allrounder,mr
+hey best ODI bowlers by dot ball percentage,bowling,en
+Vijay Hazare madhil sarvottam kshetrarakshak dakhva,fielding,mr-Latn
+महिला गोलंदाज ज्यांची इकॉनॉमी 7 पेक्षा कमी आहे,bowling,mr
+सय्यद मुश्ताक अली में सबसे ज़्यादा रन किसने बनाए,batting,hi
+वर्धा के सबसे ज़्यादा रन बनाने वाले बल्लेबाज़,batting,hi
+please dhoni ke stumping,external_data,hi-Latn
+hey ms dhoni stumpings,external_data,en
+please recipe for pasta,out_of_scope,en
+रन और विकेट के हिसाब से टॉप 5 ऑलराउंडर,allrounder,hi
+भाई फ्रांस की राजधानी क्या है,out_of_scope,hi
+bowlers with the most wides in middle overs,discipline,en
+hey write a poem about rain,out_of_scope,en
+रणजी मध्ये सर्वात जास्त धावा कोणी केल्या,batting,mr
+stumping ke hisab se top 3 wicketkeeper,fielding,hi-Latn
+मित्रा मदत करा,greeting,mr
+zara aaj mausam kaisa hai,out_of_scope,hi-Latn
+ek minute dhoni che stumping,external_data,mr-Latn
+can you tell bowlers with most extras in Vijay Hazare Trophy,discipline,en
+can you tell ms dhoni stumpings,external_data,en
+stumping nusar top 10 yashtirakshak,fielding,mr-Latn
+Vijay Hazare madhe sarvat jast bali ghenare top 7 golandaj,bowling,mr-Latn
+zara ODI mein strike rate ke hisab se top 3 ballebaaz,batting,hi-Latn
+भाई मदद करो,greeting,hi
+रणजी मधील सर्वोत्तम क्षेत्ररक्षक दाखवा,fielding,mr
+रणजी में सबसे ज़्यादा रन किसने बनाए,batting,hi
+कृपया डेथ ओवर में सबसे अच्छी इकॉनमी वाले गेंदबाज़ दिखाओ,bowling,hi
+good morning,greeting,en
+ek minute ek joke sanga,out_of_scope,mr-Latn
+रणजी मध्ये सर्वोत्तम अष्टपैलू कोण आहे,allrounder,mr
+kaun si team sabse zyada no ball deti hai,discipline,hi-Latn
+सीनियर गेंदबाज़ जिनकी इकॉनमी 6 से कम हो,bowling,hi
+stumping ke hisab se top 7 wicketkeeper,fielding,hi-Latn
+डेथ ओवर में सबसे ज़्यादा वाइड डालने वाले गेंदबाज़,discipline,hi
+भाई विराट कोहली का स्ट्राइक रेट बताओ,external_data,hi
+T20 मधील सर्वोत्तम अष्टपैलू खेळाडू दाखवा,allrounder,mr
+T20 mein sabse zyada extras dene wale gendbaaz batao,discipline,hi-Latn
+कृपया फ्रांस की राजधानी क्या है,out_of_scope,hi
+ms dhoni stumpings,external_data,en
+कृपया पायथन कैसे सीखें,out_of_scope,hi
+ek minute virat kohli cha strike rate sanga,external_data,mr-Latn
+can you tell how to learn python,out_of_scope,en
+please ek changla chitrapat sanga,out_of_scope,mr-Latn
+bowlers with the most wides in death overs,discipline,en
+फर्स्ट क्लास मध्ये सर्वाधिक एक्स्ट्रा देणारे गोलंदाज सांगा,discipline,mr
+विराट कोहलीचा स्ट्राइक रेट सांगा,external_data,mr
+vishwachashakatil top golandaj,external_data,mr-Latn
+bhai namaste,greeting,hi-Latn
+please vishwachashakatil top golandaj,external_data,mr-Latn
+U19 all-rounders with strike rate above 130,allrounder,en
+कृपया गाणे ऐकव,out_of_scope,mr
+विजय हजारे मध्ये सर्वाधिक षटकार कोणी मारले,batting,mr
+कृपया कोई अच्छी फिल्म बताओ,out_of_scope,hi
+zara gaana sunao,out_of_scope,hi-Latn
+भाई वनडे में डॉट बॉल के हिसाब से सबसे अच्छे गेंदबाज़,bowling,hi
+आज हवामान कसे आहे,out_of_scope,mr
+world cup ke top gendbaaz,external_data,hi-Latn
+first class batters with boundary percentage over 20,batting,en
+please who scored the most runs in IPL,external_data,en
+कृपया डेथ ओव्हर मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,discipline,mr
+ek minute namaste kasa ahes,greeting,mr-Latn
+फर्स्ट क्लास मध्ये डॉट बॉल नुसार सर्वोत्तम गोलंदाज,bowling,mr
+please ek joke sanga,out_of_scope,mr-Latn
+मित्रा सय्यद मुश्ताक अली मधील सर्वोत्तम क्षेत्ररक्षक दाखवा,fielding,mr
+कृपया नमस्ते कैसे हो,greeting,hi
+best U19 batters in the middle overs,batting,en
+zara france ki rajdhani kya hai,out_of_scope,hi-Latn
+कृपया नमस्कार कसे आहात,greeting,mr
+most indisciplined bowlers in T20,discipline,en
+Ranji mein kitne match khele gaye,general,hi-Latn
+middle over madhe sarvottam economy asleale golandaj dakhva,bowling,mr-Latn
+U19 khelaadunmadhe sarvat jast run out konni kele,fielding,mr-Latn
+nivadnukiche nikal kay aahet,out_of_scope,mr-Latn
+भाई नमस्ते कैसे हो,greeting,hi
+bhai kaun si team ne sabse zyada match jeete,general,hi-Latn
+मित्रा विजय हजारे मध्ये किती सामने खेळले गेले,general,mr
+please koi joke sunao,out_of_scope,hi-Latn
+world cup top bowlers,external_data,en
+Mushtaq Ali mein sabse behtar allrounder kaun hai,allrounder,hi-Latn
+T20 ke sabse acche allrounder dikhao,allrounder,hi-Latn
+most run outs by senior male players,fielding,en
+गाणे ऐकव,out_of_scope,mr
+वर्ल्ड कप के टॉप गेंदबाज़,external_data,hi
+वनडे में बाउंड्री प्रतिशत 20 से ज़्यादा वाले बल्लेबाज़ बताओ,batting,hi
+T20 mein dot ball percentage ke hisab se sabse acche gendbaaz,bowling,hi-Latn
+T20 madhe strike rate nusar top 5 falandaj,batting,mr-Latn
+best fielders in SMAT,fielding,en
+SMAT mein sabse zyada wicket lene wale top 10 gendbaaz,bowling,hi-Latn
+namaste,greeting,hi-Latn
+भाई डेथ ओवर में सबसे ज़्यादा वाइड डालने वाले गेंदबाज़,discipline,hi
+SMAT mein sabse zyada chhakke kisne lagaye,batting,hi-Latn
+best T20 bowlers by dot ball percentage,bowling,en
+मित्रा विश्वचषकातील टॉप गोलंदाज,external_data,mr
+रन और विकेट के हिसाब से टॉप 10 ऑलराउंडर,allrounder,hi
+please hello bhai,greeting,hi-Latn
+भाई सबसे ज़्यादा रन आउट किसने किए,fielding,hi
+Ranji madhe sarvat jast shatkar konni marle,batting,mr-Latn
+जिल्ह्यानुसार एकूण धावा दाखवा,general,mr
+please ODI me boundary percentage 25 se zyada wale ballebaaz batao,batting,hi-Latn
+कृपया IPL में सबसे ज़्यादा रन किसने बनाए,external_data,hi
+compare districts by total runs,general,en
+mitra namaste kasa ahes,greeting,mr-Latn
+mitra hello kasa aahes,greeting,mr-Latn
+please nivadnukiche nikal kay aahet,out_of_scope,mr-Latn
+फर्स्ट क्लास मधील सर्वोत्तम अष्टपैलू खेळाडू दाखवा,allrounder,mr
+dhava ani bali nusar top 7 ashtapailu,allrounder,mr-Latn
+chunav ke nateeje kya hain,out_of_scope,hi-Latn
+namaste kasa ahes,greeting,mr-Latn
+catches taken per district in Vijay Hazare Trophy,fielding,en
+zara delhi ki flight book karo,out_of_scope,hi-Latn
+aaj mausam kaisa hai,out_of_scope,hi-Latn
+please international cricket mein sabse zyada wicket,external_data,hi-Latn
+please francechi rajdhani konti aahe,out_of_scope,mr-Latn
+antararashtriya cricket madhe sarvat jast bali,external_data,mr-Latn
+who scored the most runs in Ranji Trophy,batting,en
+स्टंपिंगनुसार टॉप 10 यष्टिरक्षक,fielding,mr
+मित्रा कोणता संघ सर्वात जास्त नो बॉल टाकतो,discipline,mr
+भाई IPL में सबसे ज़्यादा रन किसने बनाए,external_data,hi
+run aur wicket ke hisab se top 5 allrounder,allrounder,hi-Latn
+भाई पावरप्ले में सबसे अच्छी इकॉनमी वाले गेंदबाज़ दिखाओ,bowling,hi
+first class mein strike rate ke hisab se top 10 ballebaaz,batting,hi-Latn
+विजय हजारे में सबसे ज़्यादा विकेट लेने वाले टॉप 3 गेंदबाज़,bowling,hi
+hey bowlers with most extras in Vijay Hazare Trophy,discipline,en
+bhai koi achhi movie batao,out_of_scope,hi-Latn
+कृपया रन और विकेट के हिसाब से टॉप 7 ऑलराउंडर,allrounder,hi
+mitra Vijay Hazare madhe sarvat jast shatkar konni marle,batting,mr-Latn
+please python kase shikave,out_of_scope,mr-Latn
+sabse anushasanheen gendbaaz kaun hain,discipline,hi-Latn
+ek minute gane aikva,out_of_scope,mr-Latn
+कृपया T20 मध्ये बाउंड्री टक्केवारी 20 पेक्षा जास्त असलेले फलंदाज सांगा,batting,mr
+zara python kaise seekhe,out_of_scope,hi-Latn
+which bowlers have the best economy in the powerplay,bowling,en
+please who will win the election,out_of_scope,en
+भाई आज मौसम कैसा है,out_of_scope,hi
+T20 madhil sarvottam ashtapailu khelaadu dakhva,allrounder,mr-Latn
+ya hangamat sarvat jast zel konni ghetle,fielding,mr-Latn
+zara dhoni ke stumping,external_data,hi-Latn
+dhoni ke stumping,external_data,hi-Latn
+powerplay madhe sarvottam falandaj dakhva,batting,mr-Latn
+T20 madhe strike rate nusar top 3 falandaj,batting,mr-Latn
+कृपया कोई जोक सुनाओ,out_of_scope,hi
+mitra IPL madhe sarvat jast dhava konni kelya,external_data,mr-Latn
+hey compare districts by total runs,general,en
+best all-rounders in ODI,allrounder,en
+most wickets taken in Syed Mushtaq Ali,bowling,en
+bhai zile ke hisab se kul run dikhao,general,hi-Latn
+मित्रा गाणे ऐकव,out_of_scope,mr
+hey india international team stats,external_data,en
+first class batters with boundary percentage over 30,batting,en
+Ranji mein sabse zyada chhakke kisne lagaye,batting,hi-Latn
+zara world cup ke top gendbaaz,external_data,hi-Latn
+सय्यद मुश्ताक अली मध्ये सर्वोत्तम अष्टपैलू कोण आहे,allrounder,mr
+which bowlers have the best economy in the death overs,bowling,en
+ek minute share bajarachi batmi sanga,out_of_scope,mr-Latn
+भाई पनीर की रेसिपी बताओ,out_of_scope,hi
+mitra vishwachashakatil top golandaj,external_data,mr-Latn
+please gaana sunao,out_of_scope,hi-Latn
+मित्रा फ्रान्सची राजधानी कोणती आहे,out_of_scope,mr
+विजय हजारे में सबसे बेहतर ऑलराउंडर कौन है,allrounder,hi
+चुनाव के नतीजे क्या हैं,out_of_scope,hi
+hey sing a song,out_of_scope,en
+ek minute Ranji madhe sarvottam ashtapailu kon aahe,allrounder,mr-Latn
+bhai chunav ke nateeje kya hain,out_of_scope,hi-Latn
+please hello how are you,greeting,en
+opener ballebaaz jinka strike rate sabse acha ho,batting,hi-Latn
+कृपया आज मौसम कैसा है,out_of_scope,hi
+वनडे के सबसे अच्छे ऑलराउंडर दिखाओ,allrounder,hi
+कृपया सबसे ज़्यादा रन आउट किसने किए,fielding,hi
+most run outs by U19 players,fielding,en
+can you tell what is the capital of france,out_of_scope,en
+please how to learn python,out_of_scope,en
+ek minute nivadnukiche nikal kay aahet,out_of_scope,mr-Latn
+डेथ ओव्हर मध्ये सर्वोत्तम इकॉनॉमी असलेले गोलंदाज दाखवा,bowling,mr
+mitra ya hangamat sarvat jast zel konni ghetle,fielding,mr-Latn
+U19 khiladiyon mein sabse zyada run out kisne kiye,fielding,hi-Latn
+सय्यद मुश्ताक अली के सबसे अच्छे फील्डर दिखाओ,fielding,hi
+वनडे में डॉट बॉल के हिसाब से सबसे अच्छे गेंदबाज़,bowling,hi
+विजय हजारे मध्ये किती सामने खेळले गेले,general,mr
+stumping ke hisab se top 10 wicketkeeper,fielding,hi-Latn
+मिडल ओव्हर मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,discipline,mr
+konta sangh sarvat jast no ball takto,discipline,mr-Latn
+वनडे में बाउंड्री प्रतिशत 30 से ज़्यादा वाले बल्लेबाज़ बताओ,batting,hi
+या हंगामात सर्वात जास्त झेल कोणी घेतले,fielding,mr
+विजय हजारे मध्ये सर्वात जास्त धावा कोणी केल्या,batting,mr
+mitra ek changla chitrapat sanga,out_of_scope,mr-Latn
+mitra virat kohli cha strike rate sanga,external_data,mr-Latn
+ek minute puranpolichi recipe sang,out_of_scope,mr-Latn
+Ranji madhe sarvottam ashtapailu kon aahe,allrounder,mr-Latn
+can you tell hello,greeting,en
+पायथन कैसे सीखें,out_of_scope,hi
+कृपया जिले के हिसाब से कुल रन दिखाओ,general,hi
+bhai gaana sunao,out_of_scope,hi-Latn
+bhai france ki rajdhani kya hai,out_of_scope,hi-Latn
+पॉवरप्ले मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,discipline,mr
+is season sabse zyada catch kisne pakde,fielding,hi-Latn
+mitra namaskar,greeting,mr-Latn
+भाई फर्स्ट क्लास में बाउंड्री प्रतिशत 25 से ज़्यादा वाले बल्लेबाज़ बताओ,batting,hi
+निवडणुकीचे निकाल काय आहेत,out_of_scope,mr
+विश्वचषकातील टॉप गोलंदाज,external_data,mr
+T20 mein strike rate ke hisab se top 3 ballebaaz,batting,hi-Latn
+catches taken per district in SMAT,fielding,en
+jilhyanusar ekun dhava dakhva,general,mr-Latn
+स्टंपिंगनुसार टॉप 5 यष्टिरक्षक,fielding,mr
+share bazaar ki khabar batao,out_of_scope,hi-Latn
+dilli sathi flight book kara,out_of_scope,mr-Latn
+zara share bazaar ki khabar batao,out_of_scope,hi-Latn
+please good morning,greeting,en
+भाई विजय हजारे में सबसे ज़्यादा रन किसने बनाए,batting,hi
+सय्यद मुश्ताक अली में सबसे ज़्यादा छक्के किसने लगाए,batting,hi
+hey what is the capital of france,out_of_scope,en
+Nagpur mein sabse zyada catch,fielding,hi-Latn
+वर्धा चे सर्वात जास्त धावा करणारे फलंदाज,batting,mr
+please Nagpur madhe sarvat jast zel,fielding,mr-Latn
+mitra gane aikva,out_of_scope,mr-Latn
+शेयर बाजार की खबर बताओ,out_of_scope,hi
+namaskar mitra,greeting,mr-Latn
+share bajarachi batmi sanga,out_of_scope,mr-Latn
+कृपया चुनाव के नतीजे क्या हैं,out_of_scope,hi
+U16 ladkiyon ke khiladiyon mein sabse zyada run out kisne kiye,fielding,hi-Latn
+hey best fielders in SMAT,fielding,en
+women all-rounders with strike rate above 130,allrounder,en
+mitra nivadnukiche nikal kay aahet,out_of_scope,mr-Latn
+hey how to learn python,out_of_scope,en
+best all-rounders in T20,allrounder,en
+mitra dhoni che stumping,external_data,mr-Latn
+ODI batters with boundary percentage over 25,batting,en
+कोई जोक सुनाओ,out_of_scope,hi
+death over mein sabse zyada wide dalne wale gendbaaz,discipline,hi-Latn
+Vijay Hazare mein sabse behtar allrounder kaun hai,allrounder,hi-Latn
+भाई वर्ल्ड कप के टॉप गेंदबाज़,external_data,hi
+who took the most catches this season,fielding,en
+middle order ballebaaz jinka strike rate sabse acha ho,batting,hi-Latn
+please dhoni che stumping,external_data,mr-Latn
+IPL mein sabse zyada run kisne banaye,external_data,hi-Latn
+डेथ ओव्हर मध्ये सर्वोत्तम फलंदाज दाखवा,batting,mr
+पावरप्ले में सबसे ज़्यादा वाइड डालने वाले गेंदबाज़,discipline,hi
+मिडल ओवर में सबसे ज़्यादा वाइड डालने वाले गेंदबाज़,discipline,hi
+zile ke hisab se kul run dikhao,general,hi-Latn
+कृपया मदद करो,greeting,hi
+bhai delhi ki flight book karo,out_of_scope,hi-Latn
+Mushtaq Ali madhe kiti samane khelle gele,general,mr-Latn
+bhai koi joke sunao,out_of_scope,hi-Latn
+most sixes in Syed Mushtaq Ali,batting,en
+bhai powerplay mein sabse zyada wide dalne wale gendbaaz,discipline,hi-Latn
+mitra ek joke sanga,out_of_scope,mr-Latn
+bhai madad karo,greeting,hi-Latn
+कृपया हॅलो,greeting,mr
+hey recipe for pasta,out_of_scope,en
+koi joke sunao,out_of_scope,hi-Latn
+Mushtaq Ali madhil sarvottam kshetrarakshak dakhva,fielding,mr-Latn
+Mushtaq Ali madhe sarvottam ashtapailu kon aahe,allrounder,mr-Latn
+can you tell hey there,greeting,en
+मित्रा विराट कोहलीचा स्ट्राइक रेट सांगा,external_data,mr
+please highest run scorers from Wardha,batting,en
+पावरप्ले में सबसे अच्छी इकॉनमी वाले गेंदबाज़ दिखाओ,bowling,hi
+आंतरराष्ट्रीय क्रिकेटमध्ये सर्वाधिक बळी,external_data,mr
+zara koi joke sunao,out_of_scope,hi-Latn
+कृपया विराट कोहली का स्ट्राइक रेट बताओ,external_data,hi
+what is the weather today,out_of_scope,en
+हेलो,greeting,hi
+भाई किस टीम ने सबसे ज़्यादा मैच जीते,general,hi
+मित्रा शेअर बाजाराची बातमी सांगा,out_of_scope,mr
+namaskar,greeting,hi-Latn
+भाई किस जिले से सबसे ज़्यादा खिलाड़ी आते हैं,general,hi
+kay challay,greeting,mr-Latn
+can you tell hello how are you,greeting,en
+most run outs by U16 female players,fielding,en
+kis zile se sabse zyada khiladi aate hain,general,hi-Latn
+can you tell who scored the most runs in IPL,external_data,en
+please hello kasa aahes,greeting,mr-Latn
+hey top 10 left-arm orthodox bowlers by wickets in Ranji Trophy,bowling,en
+मित्रा कोणत्या जिल्ह्यातून सर्वात जास्त खेळाडू येतात,general,mr
+एकदिवसीय मधील सर्वोत्तम अष्टपैलू खेळाडू दाखवा,allrounder,mr
+hello how are you,greeting,en
+पनीर की रेसिपी बताओ,out_of_scope,hi
+मित्रा मिडल ओव्हर मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,discipline,mr
+bhai world cup ke top gendbaaz,external_data,hi-Latn
+can you tell best movies to watch,out_of_scope,en
+SMAT madhil sarvottam kshetrarakshak dakhva,fielding,mr-Latn
+please ms dhoni stumpings,external_data,en
+हॅलो,greeting,mr
+vegvan golandajanpaiki konni sarvat jast bali ghetle,bowling,mr-Latn
+please antararashtriya cricket madhe sarvat jast bali,external_data,mr-Latn
+zara sabse anushasanheen gendbaaz kaun hain,discipline,hi-Latn
+मित्रा नमस्कार,greeting,mr
+कृपया हेलो,greeting,hi
+mitra share bajarachi batmi sanga,out_of_scope,mr-Latn
+zara powerplay mein sabse zyada wide dalne wale gendbaaz,discipline,hi-Latn
+powerplay mein sabse zyada wide dalne wale gendbaaz,discipline,hi-Latn
+please help,greeting,en
+नमस्ते कैसे हो,greeting,hi
+can you tell which districts produce the most players,general,en
+फ्रान्सची राजधानी कोणती आहे,out_of_scope,mr
+hey good morning,greeting,en
+hi,greeting,en
+भाई कोई जोक सुनाओ,out_of_scope,hi
+भाई कौन सी टीम सबसे ज़्यादा नो बॉल डालती है,discipline,hi
+virat kohli cha strike rate sanga,external_data,mr-Latn
+please hi,greeting,en
+senior golandaj jyanchi economy 8 peksha kami aahe,bowling,mr-Latn
+ek minute konta sangh sarvat jast no ball takto,discipline,mr-Latn
+भाई अंतरराष्ट्रीय क्रिकेट में सबसे ज़्यादा विकेट,external_data,hi
+सबसे ज़्यादा रन आउट किसने किए,fielding,hi
+भाई शेयर बाजार की खबर बताओ,out_of_scope,hi
+which teams give the most no balls,discipline,en
+भाई गाना सुनाओ,out_of_scope,hi
+most indisciplined bowlers in first class,discipline,en
+कृपया कोणत्या जिल्ह्यातून सर्वात जास्त खेळाडू येतात,general,mr
+hey there,greeting,en
+bhai hello bhai,greeting,hi-Latn
+death over madhe sarvat jast wide ball takanare golandaj,discipline,mr-Latn
+कृपया नमस्कार,greeting,mr
+please which teams give the most no balls,discipline,en
+भाई हेलो,greeting,hi
+रणजी के सबसे अच्छे फील्डर दिखाओ,fielding,hi
+Ranji madhe sarvat jast bali ghenare top 7 golandaj,bowling,mr-Latn
+please Vijay Hazare ke sabse acche fielder dikhao,fielding,hi-Latn
+zara namaste kaise ho,greeting,hi-Latn
+IPL मध्ये सर्वात जास्त धावा कोणी केल्या,external_data,mr
+can you tell how many matches were played in SMAT,general,en
+पुरणपोळीची रेसिपी सांग,out_of_scope,mr
+धोनी के स्टंपिंग,external_data,hi
+most indisciplined bowlers in ODI,discipline,en
+Vijay Hazare madhe kiti samane khelle gele,general,mr-Latn
+कृपया नमस्कार,greeting,hi
+can you tell sing a song,out_of_scope,en
+bhai paneer ki recipe batao,out_of_scope,hi-Latn
+mitra puranpolichi recipe sang,out_of_scope,mr-Latn
+16 वर्षांखालील मुली गोलंदाज ज्यांची इकॉनॉमी 8 पेक्षा कमी आहे,bowling,mr
+कृपया वनडे में सबसे ज़्यादा एक्स्ट्रा देने वाले गेंदबाज़ बताओ,discipline,hi
+Amravati mein sabse zyada catch,fielding,hi-Latn
+सय्यद मुश्ताक अली मध्ये किती सामने खेळले गेले,general,mr
+कृपया रन और विकेट के हिसाब से टॉप 10 ऑलराउंडर,allrounder,hi
+please T20 mein dot ball percentage ke hisab se sabse acche gendbaaz,bowling,hi-Latn
+can you tell senior male all-rounders with strike rate above 130,allrounder,en
+SMAT mein sabse zyada run kisne banaye,batting,hi-Latn
+can you tell share market news today,out_of_scope,en
+please translate this sentence,out_of_scope,en
+अकोला के सबसे ज़्यादा रन बनाने वाले बल्लेबाज़,batting,hi
+senior khiladiyon mein sabse zyada run out kisne kiye,fielding,hi-Latn
+please hey there,greeting,en
+ODI mein strike rate ke hisab se top 5 ballebaaz,batting,hi-Latn
+hi kaise ho,greeting,hi-Latn
+which teams won the most matches,general,en
+नागपुर के सबसे ज़्यादा रन बनाने वाले बल्लेबाज़,batting,hi
+top 7 all-rounders by runs and wickets,allrounder,en
+कृपया अंतरराष्ट्रीय क्रिकेट में सबसे ज़्यादा विकेट,external_data,hi
+run aur wicket ke hisab se top 10 allrounder,allrounder,hi-Latn
+top 7 ODI batters by strike rate,batting,en
+first class mein sabse zyada extras dene wale gendbaaz batao,discipline,hi-Latn
+hey hey there,greeting,en
+hey help,greeting,en
+IPL madhe sarvat jast dhava konni kelya,external_data,mr-Latn
+hey translate this sentence,out_of_scope,en
+SMAT mein sabse behtar allrounder kaun hai,allrounder,hi-Latn
+Vijay Hazare mein sabse zyada wicket lene wale top 5 gendbaaz,bowling,hi-Latn
+मित्रा निवडणुकीचे निकाल काय आहेत,out_of_scope,mr
+first class madhil sarvottam ashtapailu khelaadu dakhva,allrounder,mr-Latn
+best fielders in Vijay Hazare Trophy,fielding,en
+Ranji mein sabse behtar allrounder kaun hai,allrounder,hi-Latn
+python kaise seekhe,out_of_scope,hi-Latn
+gane aikva,out_of_scope,mr-Latn
+mitra kay challay,greeting,mr-Latn
+मदद करो,greeting,hi
+please what is the capital of france,out_of_scope,en
+ek minute namaskar mitra,greeting,mr-Latn
+first class ke sabse acche allrounder dikhao,allrounder,hi-Latn
+कृपया शेयर बाजार की खबर बताओ,out_of_scope,hi
+कृपया विश्वचषकातील टॉप गोलंदाज,external_data,mr
+अंडर 19 गेंदबाज़ जिनकी इकॉनमी 7 से कम हो,bowling,hi
+mitra francechi rajdhani konti aahe,out_of_scope,mr-Latn
+bhai aaj mausam kaisa hai,out_of_scope,hi-Latn
+hey who scored the most runs in IPL,external_data,en
+bhai namaskar,greeting,hi-Latn
+ek minute first class madhil sarvottam ashtapailu khelaadu dakhva,allrounder,mr-Latn
+SMAT madhe kiti samane khelle gele,general,mr-Latn
+can you tell which all-rounders are best in Syed Mushtaq Ali,allrounder,en
+please namaskar,greeting,mr-Latn
+कोणत्या जिल्ह्यातून सर्वात जास्त खेळाडू येतात,general,mr
+virat kohli ka strike rate batao,external_data,hi-Latn
+how many matches were played in Ranji Trophy,general,en
+धावा आणि बळी नुसार टॉप 10 अष्टपैलू,allrounder,mr
+U19 gendbaaz jinki economy 8 se kam ho,bowling,hi-Latn
+ek changla chitrapat sanga,out_of_scope,mr-Latn
+leg spin golandajanpaiki konni sarvat jast bali ghetle,bowling,mr-Latn
+please aaj havaman kase aahe,out_of_scope,mr-Latn
+please namaskar mitra,greeting,mr-Latn
+कृपया स्टंपिंगनुसार टॉप 3 यष्टिरक्षक,fielding,mr
+ODI madhe strike rate nusar top 7 falandaj,batting,mr-Latn
+can you tell india international team stats,external_data,en
+please IPL madhe sarvat jast dhava konni kelya,external_data,mr-Latn
+मित्रा नमस्कार कसे आहात,greeting,mr
+सय्यद मुश्ताक अली मध्ये सर्वात जास्त बळी घेणारे टॉप 5 गोलंदाज,bowling,mr
+please write a poem about rain,out_of_scope,en
+ek minute namaskar,greeting,mr-Latn
+dhava ani bali nusar top 3 ashtapailu,allrounder,mr-Latn
+zara hello bhai,greeting,hi-Latn
+T20 madhe boundary percentage 25 peksha jast asleale falandaj sanga,batting,mr-Latn
+powerplay mein sabse acchi economy wale gendbaaz dikhao,bowling,hi-Latn
+middle over mein sabse zyada wide dalne wale gendbaaz,discipline,hi-Latn
+SMAT mein kitne match khele gaye,general,hi-Latn
+translate this sentence,out_of_scope,en
+स्टंपिंग के हिसाब से टॉप 3 विकेटकीपर,fielding,hi
+aaj havaman kase aahe,out_of_scope,mr-Latn
+which all-rounders are best in Vijay Hazare Trophy,allrounder,en
+ek minute madat kara,greeting,mr-Latn
+zara paneer ki recipe batao,out_of_scope,hi-Latn
+virat kohli strike rate,external_data,en
+फ्रांस की राजधानी क्या है,out_of_scope,hi
+can you tell good morning,greeting,en
+कृपया कौन सी टीम सबसे ज़्यादा नो बॉल डालती है,discipline,hi
+book a flight to delhi,out_of_scope,en
+T20 batters with boundary percentage over 25,batting,en
+ek minute ek changla chitrapat sanga,out_of_scope,mr-Latn
+कृपया कसा आहेस,greeting,mr
+bhai kaun si team sabse zyada no ball deti hai,discipline,hi-Latn
+कृपया एकदिवसीय मध्ये स्ट्राइक रेटनुसार टॉप 3 फलंदाज,batting,mr
+फर्स्ट क्लास में डॉट बॉल के हिसाब से सबसे अच्छे गेंदबाज़,bowling,hi
+can you tell what is the weather today,out_of_scope,en
+मित्रा धोनीचे स्टंपिंग,external_data,mr
+कृपया सर्वात जास्त धावचीत कोणी केले,fielding,mr
+can you tell write a poem about rain,out_of_scope,en
+इस सीज़न में सबसे ज़्यादा कैच किसने लिए,fielding,hi
+U16 female bowlers with economy under 6,bowling,en
+please puranpolichi recipe sang,out_of_scope,mr-Latn
+zara namaskar,greeting,hi-Latn
+ODI madhe sarvat jast extras denare golandaj sanga,discipline,mr-Latn
+Mushtaq Ali ke sabse acche fielder dikhao,fielding,hi-Latn
+please world cup ke top gendbaaz,external_data,hi-Latn
+सय्यद मुश्ताक अली में सबसे बेहतर ऑलराउंडर कौन है,allrounder,hi
+पायथन कसे शिकावे,out_of_scope,mr
+konatya sanghane sarvat jast samane jinkle,general,mr-Latn
+महिला गोलंदाज ज्यांची इकॉनॉमी 6 पेक्षा कमी आहे,bowling,mr
+kaun si team ne sabse zyada match jeete,general,hi-Latn
+कौन सी टीम सबसे ज़्यादा नो बॉल डालती है,discipline,hi
+किस जिले से सबसे ज़्यादा खिलाड़ी आते हैं,general,hi
+१९ वर्षांखालील गोलंदाज ज्यांची इकॉनॉमी 7 पेक्षा कमी आहे,bowling,mr
+sing a song,out_of_scope,en
+what is the capital of france,out_of_scope,en
+hey share market news today,out_of_scope,en
+please kay challay,greeting,mr-Latn
+bhai IPL mein sabse zyada run kisne banaye,external_data,hi-Latn
+कृपया आज हवामान कसे आहे,out_of_scope,mr
+Ranji madhil sarvottam kshetrarakshak dakhva,fielding,mr-Latn
+who will win the election,out_of_scope,en
+रन और विकेट के हिसाब से टॉप 7 ऑलराउंडर,allrounder,hi
+please sing a song,out_of_scope,en
+SMAT madhe sarvottam ashtapailu kon aahe,allrounder,mr-Latn
+कृपया एखादा चांगला चित्रपट सांगा,out_of_scope,mr
+mahila golandaj jyanchi economy 8 peksha kami aahe,bowling,mr-Latn
+most wickets taken in SMAT,bowling,en
+सर्वात जास्त धावचीत कोणी केले,fielding,mr
+T20 मध्ये सर्वाधिक एक्स्ट्रा देणारे गोलंदाज सांगा,discipline,mr
+bowlers with most extras in Syed Mushtaq Ali,discipline,en
+please SMAT madhil sarvottam kshetrarakshak dakhva,fielding,mr-Latn
+bhai virat kohli ka strike rate batao,external_data,hi-Latn
+please konatya jilhyatun sarvat jast khelaadu yetat,general,mr-Latn
+विराट कोहली का स्ट्राइक रेट बताओ,external_data,hi
+ODI ke sabse acche allrounder dikhao,allrounder,hi-Latn
+please top 7 all-rounders by runs and wickets,allrounder,en
+मिडल ओव्हर मध्ये सर्वोत्तम इकॉनॉमी असलेले गोलंदाज दाखवा,bowling,mr
+zara hi kaise ho,greeting,hi-Latn
+best movies to watch,out_of_scope,en
+कृपया पायथन कसे शिकावे,out_of_scope,mr
+hey who will win the election,out_of_scope,en
+please tell me a joke,out_of_scope,en
+delhi ki flight book karo,out_of_scope,hi-Latn
+hey book a flight to delhi,out_of_scope,en
+please namaste kasa ahes,greeting,mr-Latn
+please SMAT mein kitne match khele gaye,general,hi-Latn
+can you tell hi,greeting,en
+धावा आणि बळी नुसार टॉप 7 अष्टपैलू,allrounder,mr
+स्टंपिंगनुसार टॉप 7 यष्टिरक्षक,fielding,mr
+can you tell who will win the election,out_of_scope,en
+मित्रा कोणत्या संघाने सर्वात जास्त सामने जिंकले,general,mr
+कृपया फर्स्ट क्लास के सबसे अच्छे ऑलराउंडर दिखाओ,allrounder,hi
+रणजी में सबसे ज़्यादा विकेट लेने वाले टॉप 7 गेंदबाज़,bowling,hi
+ek minute antararashtriya cricket madhe sarvat jast bali,external_data,mr-Latn
+mitra sarvat beshist golandaj kon aahet,discipline,mr-Latn
+मिडल ओवर में सबसे अच्छी इकॉनमी वाले गेंदबाज़ दिखाओ,bowling,hi
+भाई चुनाव के नतीजे क्या हैं,out_of_scope,hi
+best women batters in the middle overs,batting,en
+most run outs by women players,fielding,en
+please virat kohli ka strike rate batao,external_data,hi-Latn
+नमस्कार,greeting,mr
+कृपया फर्स्ट क्लास में सबसे ज़्यादा एक्स्ट्रा देने वाले गेंदबाज़ बताओ,discipline,hi
+ek minute T20 madhil sarvottam ashtapailu khelaadu dakhva,allrounder,mr-Latn
+कृपया पुरणपोळीची रेसिपी सांग,out_of_scope,mr
+please virat kohli strike rate,external_data,en
+how many matches were played in SMAT,general,en
+SMAT ke sabse acche fielder dikhao,fielding,hi-Latn
+फर्स्ट क्लास मध्ये बाउंड्री टक्केवारी 30 पेक्षा जास्त असलेले फलंदाज सांगा,batting,mr
+konatya jilhyatun sarvat jast khelaadu yetat,general,mr-Latn
+bhai first class mein sabse zyada extras dene wale gendbaaz batao,discipline,hi-Latn

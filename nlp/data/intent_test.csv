@@ -1,0 +1,79 @@
+text,lang,intent,slots
+Top 10 T20 batters by strike rate,en,batting,format=T20|role=batter|metric=strike_rate|limit=10
+Left-arm orthodox bowlers with economy rate under 7 in the powerplay,en,bowling,bowler_type=left-arm orthodox|role=bowler|metric=economy_rate|thr=economy_rate<7|phase=powerplay
+Best fielders in SMAT tournament,en,fielding,role=fielder|tournament=SMAT
+Bowlers with most indiscipline (wides + no balls) in death overs,en,discipline,role=bowler|metric=indiscipline|metric=wides|metric=no_balls|phase=death
+Which districts produce the most players?,en,general,group=district
+Top U19 female batters by total runs,en,batting,age_group=U19|gender=female|role=batter|metric=runs
+Who took the most catches this season?,en,fielding,metric=catches
+Best leg-spin bowlers in SMAT by wickets taken,en,bowling,bowler_type=leg-spin|role=bowler|tournament=SMAT|metric=wickets
+boundary percentage over 20 for top order batters in T20,en,batting,metric=boundary_pct|thr=boundary_pct>20|position=top_order|role=batter|format=T20
+what is the weather today,en,out_of_scope,
+who scored the most runs in IPL,en,external_data,metric=runs
+hello,en,greeting,
+Which all-rounders have the best numbers in ODI?,en,allrounder,role=all-rounder|format=ODI
+T20 mein strike rate ke hisab se top 10 ballebaaz,hi-Latn,batting,format=T20|metric=strike_rate|role=batter|limit=10
+powerplay me sabse kam economy wale gendbaaz,hi-Latn,bowling,phase=powerplay|metric=economy_rate|role=bowler
+mahila khiladiyon me sabse jyada catch kisne pakde,hi-Latn,fielding,gender=female|metric=catches
+death overs mein sabse zyada wide dalne wale bowler,hi-Latn,discipline,phase=death|metric=wides|role=bowler
+Ranji mein sabse zyada wicket lene wale spinner,hi-Latn,bowling,tournament=Ranji|metric=wickets|bowler_type=spin
+economy 7 se kam wale tez gendbaaz dikhao,hi-Latn,bowling,metric=economy_rate|thr=economy_rate<7|bowler_type=pace|role=bowler
+nagpur ke sabse acche ballebaaz,hi-Latn,batting,district=Nagpur|role=batter
+kaun si team sabse zyada no ball deti hai,hi-Latn,discipline,group=team|metric=no_balls
+U19 ladkiyon ke top 5 allrounder,hi-Latn,allrounder,age_group=U19|gender=female|role=all-rounder|limit=5
+strike rate 130 se zyada wale opener,hi-Latn,batting,metric=strike_rate|thr=strike_rate>130|position=opener
+kis zile se sabse zyada khiladi aate hain,hi-Latn,general,group=district
+aaj mausam kaisa hai,hi-Latn,out_of_scope,
+virat kohli ka strike rate batao,hi-Latn,external_data,metric=strike_rate
+namaste bhai kaise ho aap,hi-Latn,greeting,
+vijay hazare mein batting me sabse acche wicketkeeper,hi-Latn,batting,tournament=VHT|role=batter|role=wicket-keeper
+T20 madhe strike rate nusar top 10 falandaj,mr-Latn,batting,format=T20|metric=strike_rate|role=batter|limit=10
+powerplay madhe sarvottam economy asleale golandaj dakhva,mr-Latn,bowling,phase=powerplay|metric=economy_rate|role=bowler
+ya hangamat sarvat jast zel koni ghetle,mr-Latn,fielding,metric=catches
+death over madhe sarvat jast wide takanare golandaj,mr-Latn,discipline,phase=death|metric=wides|role=bowler
+mahilanchya sarvat jast dhava konni kelya,mr-Latn,batting,gender=female|metric=runs
+nagpurchya golandajanmadhe sarvottam kon,mr-Latn,bowling,district=Nagpur|role=bowler
+stumping nusar top 5 yashtirakshak,mr-Latn,fielding,metric=stumpings|role=wicket-keeper|limit=5
+konta sangh sarvat jast no ball takto,mr-Latn,discipline,group=team|metric=no_balls
+19 varshakhalil muli ashtapailu khelaadu,mr-Latn,allrounder,age_group=U19|gender=female|role=all-rounder
+7 peksha kami economy asleale vegvan golandaj,mr-Latn,bowling,metric=economy_rate|thr=economy_rate<7|bowler_type=pace|role=bowler
+konatya jilhyatun sarvat jast khelaadu yetat,mr-Latn,general,group=district
+aaj havaman kase aahe,mr-Latn,out_of_scope,
+IPL madhil sarvottam golandaj,mr-Latn,external_data,role=bowler
+namaskar tumhi kase aahat,mr-Latn,greeting,
+madhlya shatkat sarvat jast chauke konni marle,mr-Latn,batting,phase=middle|metric=fours
+T20 में स्ट्राइक रेट के हिसाब से टॉप 10 बल्लेबाज़,hi,batting,format=T20|metric=strike_rate|role=batter|limit=10
+पावरप्ले में सबसे अच्छी इकॉनमी वाले गेंदबाज़ दिखाओ,hi,bowling,phase=powerplay|metric=economy_rate|role=bowler
+इस सीज़न में सबसे ज़्यादा कैच किसने लिए,hi,fielding,metric=catches
+डेथ ओवर में सबसे ज़्यादा वाइड डालने वाले गेंदबाज़,hi,discipline,phase=death|metric=wides|role=bowler
+रणजी ट्रॉफी में सबसे ज़्यादा विकेट लेने वाले लेग स्पिनर,hi,bowling,tournament=Ranji|metric=wickets|bowler_type=leg-spin
+इकॉनमी 7 से कम वाले तेज गेंदबाज़,hi,bowling,metric=economy_rate|thr=economy_rate<7|bowler_type=pace|role=bowler
+नागपुर के सबसे अच्छे बल्लेबाज़,hi,batting,district=Nagpur|role=batter
+कौन सी टीम सबसे ज़्यादा नो बॉल डालती है,hi,discipline,group=team|metric=no_balls
+अंडर 19 महिला ऑलराउंडर में टॉप 5,hi,allrounder,age_group=U19|gender=female|role=all-rounder|limit=5
+स्ट्राइक रेट 130 से ज्यादा वाले ओपनर,hi,batting,metric=strike_rate|thr=strike_rate>130|position=opener
+किस जिले से सबसे ज़्यादा खिलाड़ी आते हैं,hi,general,group=district
+आज मौसम कैसा है,hi,out_of_scope,
+विराट कोहली का स्ट्राइक रेट बताओ,hi,external_data,metric=strike_rate
+नमस्ते आप कैसे हैं,hi,greeting,
+विजय हजारे में सबसे ज्यादा छक्के किसने लगाए,hi,batting,tournament=VHT|metric=sixes
+T20 मध्ये स्ट्राइक रेटनुसार टॉप 10 फलंदाज,mr,batting,format=T20|metric=strike_rate|role=batter|limit=10
+पॉवरप्ले मध्ये सर्वोत्तम इकॉनॉमी असलेले गोलंदाज दाखवा,mr,bowling,phase=powerplay|metric=economy_rate|role=bowler
+या हंगामात सर्वात जास्त झेल कोणी घेतले,mr,fielding,metric=catches
+डेथ ओव्हर मध्ये सर्वात जास्त वाइड बॉल टाकणारे गोलंदाज,mr,discipline,phase=death|metric=wides|role=bowler
+महिलांच्या सर्वात जास्त धावा कोणी केल्या,mr,batting,gender=female|metric=runs
+नागपूरच्या गोलंदाजांमध्ये सर्वोत्तम कोण,mr,bowling,district=Nagpur|role=bowler
+स्टंपिंगनुसार टॉप 5 यष्टिरक्षक,mr,fielding,metric=stumpings|role=wicket-keeper|limit=5
+कोणता संघ सर्वात जास्त नो बॉल टाकतो,mr,discipline,group=team|metric=no_balls
+१९ वर्षांखालील मुली अष्टपैलू खेळाडू,mr,allrounder,age_group=U19|gender=female|role=all-rounder
+७ पेक्षा कमी इकॉनॉमी असलेले वेगवान गोलंदाज,mr,bowling,metric=economy_rate|thr=economy_rate<7|bowler_type=pace|role=bowler
+कोणत्या जिल्ह्यातून सर्वात जास्त खेळाडू येतात,mr,general,group=district
+आज हवामान कसे आहे,mr,out_of_scope,
+आयपीएल मधील सर्वोत्तम गोलंदाज,mr,external_data,role=bowler
+नमस्कार तुम्ही कसे आहात,mr,greeting,
+मधल्या षटकांत सर्वाधिक चौकार कोणी मारले,mr,batting,phase=middle|metric=fours
+powerplay में top 10 bowlers by economy,hi,bowling,phase=powerplay|role=bowler|metric=economy_rate|limit=10
+Top 5 बल्लेबाज T20 में strike rate के हिसाब से,hi,batting,limit=5|role=batter|format=T20|metric=strike_rate
+show me nagpur che best falandaj,mr-Latn,batting,district=Nagpur|role=batter
+women's t20 me sabse zyada sixes,hi-Latn,batting,gender=female|format=T20|metric=sixes
+U16 boys ke best bowlers economy ke hisab se,hi-Latn,bowling,age_group=U16|gender=male|role=bowler|metric=economy_rate

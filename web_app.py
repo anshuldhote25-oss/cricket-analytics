@@ -10,6 +10,7 @@ import os
 from config import validate, DB_NAME
 from database import test_connection, run_query
 from agent import CricketAgent
+from nlp import analyze
 
 app = FastAPI(
     title="Cricket Analytics AI Agent",
@@ -39,6 +40,7 @@ class QueryResponse(BaseModel):
     row_count: int = 0
     intent: str = ""
     error: str = ""
+    nlp: dict = {}          # language, interpreted_as, entities ... (see nlp/pipeline.py)
 
 
 def clean_rows(rows):
@@ -95,11 +97,14 @@ def query(req: QueryRequest):
 
     result = agent.ask(question)
 
-    if result["intent"] in ("out_of_scope", "external", "unanswerable"):
+    nlp_info = result.get("nlp") or {}
+
+    if result["intent"] in ("out_of_scope", "external", "unanswerable", "greeting"):
         return QueryResponse(
             success=False,
             explanation=result["explanation"],
             intent=result["intent"],
+            nlp=nlp_info,
         )
 
     if result["intent"] in ("error", "validation_error"):
@@ -108,6 +113,7 @@ def query(req: QueryRequest):
             explanation="I couldn't generate a valid query for that question.",
             error=result.get("error") or result.get("explanation") or "",
             intent=result["intent"],
+            nlp=nlp_info,
         )
 
     try:
@@ -121,6 +127,7 @@ def query(req: QueryRequest):
             rows=clean_rows(rows),
             row_count=len(rows),
             intent="proceed",
+            nlp=nlp_info,
         )
     except Exception as e:
         return QueryResponse(
@@ -128,7 +135,16 @@ def query(req: QueryRequest):
             explanation="The query ran into an error.",
             error=str(e),
             intent="error",
+            nlp=nlp_info,
         )
+
+
+@app.post("/api/analyze")
+def analyze_question(req: QueryRequest):
+    """NLP only - no LLM call, no database. Shows how the pipeline understood a question."""
+    frame = analyze(req.question)
+    return {**frame.public(), "normalized": frame.normalized, "tokens": frame.tokens,
+            "language_scores": frame.lang.scores, "llm_notes": frame.hints}
 
 
 @app.get("/api/examples")
@@ -145,6 +161,11 @@ def get_examples():
             "Best death-over bowlers by dot ball percentage",
             "Which districts produce the most players?",
             "Top-order batters with boundary percentage over 20 in T20",
+            # Hindi / Marathi, Devanagari and Roman letters
+            "T20 में स्ट्राइक रेट के हिसाब से टॉप 10 बल्लेबाज़",
+            "powerplay mein sabse acchi economy wale gendbaaz dikhao",
+            "या हंगामात सर्वात जास्त झेल कोणी घेतले",
+            "powerplay madhe sarvottam economy asleale golandaj dakhva",
         ]
     }
 

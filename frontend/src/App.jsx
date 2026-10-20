@@ -18,7 +18,7 @@ const DIM = "#94A3B8";
 
 const css = `
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { background: ${DARK}; font-family: 'Inter','Segoe UI',system-ui,sans-serif; }
+  body { background: ${DARK}; font-family: 'Inter','Segoe UI','Noto Sans Devanagari','Mukta','Kohinoor Devanagari',system-ui,sans-serif; }
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: ${BORDER}; border-radius: 2px; }
@@ -46,11 +46,42 @@ const VIEWS = [
 const EXAMPLES = [
   { q: "Top 10 T20 batters by strike rate", color: AMBER, icon: "🏏" },
   { q: "Best economy bowlers in the powerplay", color: TEAL, icon: "⚾" },
-  { q: "Top U19 female batters by total runs", color: PURPLE, icon: "👩" },
-  { q: "Who took the most catches this season?", color: GREEN, icon: "🧤" },
-  { q: "Best leg-spin bowlers in SMAT by wickets", color: SKY, icon: "🌀" },
   { q: "Which teams give the most wides?", color: CORAL, icon: "⚠️" },
+  { q: "T20 में स्ट्राइक रेट के हिसाब से टॉप 10 बल्लेबाज़", color: PURPLE, icon: "🗣" },
+  { q: "powerplay mein sabse acchi economy wale gendbaaz dikhao", color: SKY, icon: "🗣" },
+  { q: "या हंगामात सर्वात जास्त झेल कोणी घेतले", color: GREEN, icon: "🗣" },
+  { q: "death over madhe sarvat jast wide takanare golandaj", color: CORAL, icon: "🗣" },
+  { q: "mahila khiladiyon me sabse jyada catch kisne pakde", color: TEAL, icon: "🗣" },
+  { q: "७ पेक्षा कमी इकॉनॉमी असलेले वेगवान गोलंदाज", color: AMBER, icon: "🗣" },
 ];
+
+const INFO_INTENTS = ["out_of_scope", "external", "greeting", "unanswerable"];
+
+function NlpStrip({ nlp }) {
+  if (!nlp?.language) return null;
+  const chips = (nlp.entities || []).filter(e => e.category !== "direction").slice(0, 10);
+  return (
+    <div style={{ marginBottom: 10, paddingBottom: 8, borderBottom: `1px dashed ${BORDER}` }}>
+      <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8, fontSize: 11.5 }}>
+        <span style={{ background: `${SKY}18`, border: `1px solid ${SKY}40`, color: SKY, borderRadius: 20, padding: "2px 9px", fontWeight: 600 }}>
+          🌐 {nlp.language_label}
+        </span>
+        {nlp.interpreted_as && (
+          <span style={{ color: DIM }}>understood as <b style={{ color: TEXT, fontWeight: 600 }}>{nlp.interpreted_as}</b></span>
+        )}
+      </div>
+      {chips.length > 0 && (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: 7 }}>
+          {chips.map((e, i) => (
+            <span key={i} title={`matched "${e.text}" (${e.match})`} style={{ background: DARK, border: `1px solid ${BORDER}`, borderRadius: 6, color: MUTED, fontSize: 10.5, padding: "1px 7px" }}>
+              {e.category.replace(/_/g, " ")}: <span style={{ color: AMBER_BRIGHT }}>{e.value}</span>
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function Dots() {
   return (
@@ -77,18 +108,18 @@ function DataBrowser({ onClose, onAsk }) {
     setLoading(true);
     setFilter("");
     try {
-      const res = await fetch("/api/query", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: `Show me all data from ${view.key} limit 50` }),
-      });
+      const res = await fetch(`/api/browse/${view.key}`);
       const data = await res.json();
-      if (data.success && data.rows?.length) { setCols(data.columns); setRows(data.rows); }
-      else { setCols([]); setRows([]); }
+      if (data.success && data.rows?.length) {
+        setCols(data.columns);
+        setRows(data.rows);
+      } else {
+        setCols([]);
+        setRows([]);
+      }
     } catch { setCols([]); setRows([]); }
     setLoading(false);
   };
-
   useEffect(() => { loadView(VIEWS[0]); }, []);
 
   const filtered = filter
@@ -243,6 +274,7 @@ function Message({ msg }) {
   return (
     <div className="msg-in" style={{ marginBottom: 18 }}>
       <div style={{ background: CARD, border: `1px solid ${BORDER}`, borderRadius: "3px 14px 14px 14px", padding: "14px 16px", maxWidth: 820 }}>
+        <NlpStrip nlp={msg.nlp} />
         {msg.success ? (
           <>
             <div style={{ color: GREEN, fontSize: 13.5, marginBottom: msg.assumptions ? 4 : 10, display: "flex", alignItems: "flex-start", gap: 7 }}>
@@ -265,9 +297,20 @@ function Message({ msg }) {
             )}
           </>
         ) : (
-          <div style={{ color: CORAL, fontSize: 13, display: "flex", gap: 6 }}>
-            <span>✗</span>{msg.explanation || msg.error || "Something went wrong. Please try again."}
-          </div>
+          <>
+            {INFO_INTENTS.includes(msg.intent) ? (
+              <div style={{ color: TEXT, fontSize: 13.5, display: "flex", gap: 7, lineHeight: 1.55 }}>
+                <span style={{ color: SKY, flexShrink: 0 }}>ℹ</span>{msg.explanation}
+              </div>
+            ) : (
+              <div style={{ color: CORAL, fontSize: 13, display: "flex", gap: 6 }}>
+                <span>✗</span>{msg.explanation || msg.error || "Something went wrong. Please try again."}
+              </div>
+            )}
+            {!INFO_INTENTS.includes(msg.intent) && msg.error && (
+              <div style={{ color: MUTED, fontSize: 11.5, marginTop: 6, fontFamily: "monospace", wordBreak: "break-word" }}>{msg.error}</div>
+            )}
+          </>
         )}
       </div>
     </div>
@@ -327,6 +370,8 @@ export default function App() {
             ))}
           </div>
 
+          <span title="Supported input languages (Roman-letter Hindi/Marathi also works)" style={{ background: `${SKY}15`, border: `1px solid ${SKY}40`, color: SKY, borderRadius: 20, fontSize: 11, fontWeight: 600, padding: "3px 10px" }}>EN · हिं · मरा</span>
+
           <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
             <button className="icon-btn" onClick={() => setShowDB(true)} style={{
               background: `${AMBER}15`, border: `1px solid ${AMBER}40`, borderRadius: 8,
@@ -353,7 +398,7 @@ export default function App() {
                   Ask anything about the data
                 </div>
                 <div style={{ fontSize: 14, color: MUTED, maxWidth: 420, margin: "0 auto 32px", lineHeight: 1.7 }}>
-                  Player performance, match stats, fielding, bowling discipline — ask in plain English and get instant answers.
+                  Player performance, match stats, fielding, bowling discipline — ask in English, हिंदी or मराठी (Hindi and Marathi typed in English letters work too) and get instant answers.
                 </div>
 
                 {/* Stat bar */}
@@ -420,7 +465,7 @@ export default function App() {
                 value={input}
                 onChange={e => setInput(e.target.value)}
                 onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendQuestion(input); } }}
-                placeholder="Ask a question… e.g. Top T20 batters by strike rate"
+                placeholder="Ask in English / हिंदी / मराठी … e.g. powerplay madhe sarvottam golandaj"
                 rows={1}
                 disabled={loading}
                 style={{

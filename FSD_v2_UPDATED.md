@@ -61,7 +61,7 @@ Functional requirements are grouped into five areas:
 
 ### 5.1 Description
 
-The system accepts questions typed in plain English (or Hinglish-influenced phrasing common in Indian cricket conversation) describing the player performance data the user wants to see.
+The system accepts questions typed in plain English, Hindi or Marathi — in Devanagari script or in Roman letters (Hinglish / romanized Marathi), including code-mixed phrasing common in Indian cricket conversation — describing the player performance data the user wants to see. A multilingual NLP pre-processing layer (`nlp/`) detects the language, normalises the text, extracts cricket entities and thresholds, and passes them to the LLM as grounding notes; replies to greetings and out-of-scope questions are returned in the user's own language and script.
 
 ### 5.2 Functional Rules
 
@@ -190,7 +190,7 @@ A "Browse Data" modal allows users to directly query analytics views without usi
 - The system does not support multi-turn context where a previous result is automatically fed into the next query (manual refinement only).
 - The system does not support charting or visualization beyond simple leaderboards in Phase 2.
 - The system does not support voice input or voice output.
-- The system does not support multi-language queries (English/Hinglish only).
+- The system does not translate result data; column names and player names remain in English. (Questions in English, Hindi and Marathi are supported — see FR-1.)
 
 ---
 
@@ -252,4 +252,5 @@ A "Browse Data" modal allows users to directly query analytics views without usi
 
 **Version History**
 - v2.0 (2026-07-21): Initial FSD with GPT-4o Mini, Phase 1 & 2 design
+- v2.2 (2026-10-12): Added multilingual NLP layer (English / Hindi / Marathi, Devanagari and Roman script), `/api/analyze` endpoint
 - v2.1 (2026-08-08): Updated LLM to Groq (Llama 3.3 70B), refined accuracy criteria, added direct view browsing, finalized API endpoints
