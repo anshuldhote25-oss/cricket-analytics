@@ -88,5 +88,72 @@ class IntentTests(unittest.TestCase):
         self.assertIn("हा प्रश्न", analyze("आज हवामान कसे आहे").reply())
 
 
+
+class StubEmbedder:
+    """Stand-in for MuRIL so the classifier head can be tested without torch or a download:
+    a hashed bag of character 3-grams, L2-normalised. Same interface as TransformerEmbedder."""
+    name = "stub-hashed-char-ngrams"
+
+    def encode(self, texts, dim=256):
+        import numpy as np
+        out = np.zeros((len(texts), dim))
+        for i, t in enumerate(texts):
+            t = f" {t.lower()} "
+            for j in range(len(t) - 2):
+                out[i, sum(ord(c) * (k + 7) for k, c in enumerate(t[j:j + 3])) % dim] += 1
+        return out / np.maximum(np.linalg.norm(out, axis=1, keepdims=True), 1e-9)
+
+
+try:
+    import numpy as _np  # noqa: F401
+except ImportError:                                  # pragma: no cover
+    _np = None
+
+
+@unittest.skipIf(_np is None, "numpy not installed")
+class EmbeddingHeadTests(unittest.TestCase):
+    """Logic of the pretrained-encoder classifier (head, persistence, ensemble) with a stub encoder."""
+
+    @classmethod
+    def setUpClass(cls):
+        import csv
+        from pathlib import Path
+        from nlp.embed_intent import EmbeddingIntent
+        path = Path(__file__).parent / "data" / "intent_train.csv"
+        with open(path, newline="", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        cls.rows = rows
+        cls.clf = EmbeddingIntent(StubEmbedder(), epochs=150).fit([r["text"] for r in rows], [r["intent"] for r in rows])
+
+    def test_learns_the_training_set(self):
+        preds = self.clf.predict_many([r["text"] for r in self.rows])
+        acc = sum(p == r["intent"] for (p, _), r in zip(preds, self.rows)) / len(self.rows)
+        self.assertGreater(acc, 0.9)
+
+    def test_probabilities_sum_to_one(self):
+        probs = self.clf.predict_proba("top 10 T20 batters by strike rate")
+        self.assertAlmostEqual(sum(probs.values()), 1.0, places=6)
+        self.assertEqual(set(probs), set(self.clf.classes))
+
+    def test_save_and_load_roundtrip(self):
+        import tempfile
+        from pathlib import Path
+        from nlp.embed_intent import EmbeddingIntent
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "m.json"
+            self.clf.save(path)
+            again = EmbeddingIntent.load(path, embedder=StubEmbedder())
+        q = "powerplay mein sabse kam economy wale gendbaaz"
+        self.assertEqual(self.clf.predict_proba(q).keys(), again.predict_proba(q).keys())
+        for c, p in self.clf.predict_proba(q).items():
+            self.assertAlmostEqual(p, again.predict_proba(q)[c], places=9)
+
+    def test_pipeline_ensemble_uses_encoder_when_given(self):
+        # no entities -> falls through to the learned classifiers; source must say the encoder took part
+        f = analyze("hello there how is the weather", embed=self.clf)
+        self.assertIn(f.intent_source, {"lexicon", "nb+encoder"})
+        f = analyze("T20 mein sabse zyada runs kisne banaye", embed=self.clf)
+        self.assertEqual(f.intent, "batting")          # rules still decide when entities are clear
+
 if __name__ == "__main__":
     unittest.main()

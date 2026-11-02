@@ -14,6 +14,7 @@ analyze(text) returns a Frame. Nothing here calls the network.
 """
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass, field
 
 from . import nlg
@@ -26,6 +27,8 @@ from .normalize import normalize_text, tokenize
 BLOCKING_INTENTS = {"out_of_scope", "external_data", "greeting"}
 _MODEL = None
 _MODEL_LOADED = False
+_EMBED = None
+_EMBED_LOADED = False
 
 
 def get_model():
@@ -33,6 +36,21 @@ def get_model():
     if not _MODEL_LOADED:
         _MODEL, _MODEL_LOADED = NaiveBayesIntent.load(), True
     return _MODEL
+
+
+def get_embed_model():
+    """Optional pretrained-encoder classifier. Off by default; enable with  NLP_EMBEDDINGS=1  after
+    `python -m nlp.train_embed`. Returns None when disabled or when its dependencies are missing."""
+    global _EMBED, _EMBED_LOADED
+    if not _EMBED_LOADED:
+        _EMBED_LOADED = True
+        if os.environ.get("NLP_EMBEDDINGS", "").lower() in ("1", "true", "yes"):
+            from .embed_intent import EmbeddingIntent, deps_available
+            if deps_available():
+                _EMBED = EmbeddingIntent.load()
+            if _EMBED is None:
+                print("[nlp] NLP_EMBEDDINGS is set but no trained encoder model / torch+transformers; using Naive Bayes only")
+    return _EMBED
 
 
 @dataclass
@@ -82,7 +100,7 @@ class Frame:
         }
 
 
-def _decide_intent(tokens, entities, model):
+def _decide_intent(tokens, entities, model, text="", embed=None):
     cats = [e.category for e in entities]
     domain = [e for e in entities if e.category in DOMAIN_CATEGORIES]
     rule = rule_intent(entities)
@@ -102,24 +120,30 @@ def _decide_intent(tokens, entities, model):
 
     # 2. no usable entities -> fall back to the learned Naive Bayes classifier
     probs = model.predict_proba(featurize(tokens, entities))
+    source = "nb"
+    if embed is not None:                      # ensemble: average Naive Bayes with the pretrained-encoder classifier
+        pe = embed.predict_proba(text)
+        probs = {c: (probs.get(c, 0.0) + pe.get(c, 0.0)) / 2 for c in set(probs) | set(pe)}
+        source = "nb+encoder"
     top = max(probs, key=probs.get)
     p = probs[top]
     # a learned guess may only block a question when it is very sure; greetings need a lexicon hit
     if top == "out_of_scope" and p >= 0.9 and not domain:
-        return "out_of_scope", p, "nb"
+        return "out_of_scope", p, source
     if top in SUB_INTENTS and p >= 0.8 and domain:
-        return top, p, "nb"
-    return "unknown", p, "nb"
+        return top, p, source
+    return "unknown", p, source
 
 
-def analyze(text: str, model=None) -> Frame:
+def analyze(text: str, model=None, embed=None) -> Frame:
     model = model if model is not None else get_model()
+    embed = embed if embed is not None else get_embed_model()
     normalized = normalize_text(text)
     tokens = tokenize(text)
     lang = detect_language(text, tokens)
     entities = extract_entities(tokens)
     limit, thresholds = resolve_numbers(tokens, entities)
-    intent, conf, source = _decide_intent(tokens, entities, model)
+    intent, conf, source = _decide_intent(tokens, entities, model, normalized, embed)
     frame = Frame(text, normalized, tokens, lang, entities, limit, thresholds, intent, conf, source)
     frame.interpreted_as = nlg.describe(frame) if any(e.category in DOMAIN_CATEGORIES for e in entities) else ""
     frame.hints = nlg.build_hints(frame)

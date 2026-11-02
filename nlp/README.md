@@ -54,6 +54,26 @@ python -m unittest nlp.test_pipeline -v
 The running server also exposes `POST /api/analyze {"question": "..."}`, which returns the whole analysis
 (tokens, language scores, entities, notes for the LLM) without calling the LLM or the database.
 
+## Optional: pretrained multilingual encoder (MuRIL)
+
+`nlp/embed_intent.py` adds a second intent classifier built on a **pretrained transformer**:
+`google/muril-base-cased` (BERT trained by Google on 17 Indian languages, including Roman-script text).
+The encoder is frozen and gives a 768-d mean-pooled sentence vector; only a small softmax-regression head is
+trained by us on `data/intent_train.csv`. Naive Bayes (trained from scratch) and this model are compared on the same
+78 test questions by `python -m nlp.evaluate`.
+
+```bash
+pip install torch transformers          # one-off, then the first run downloads MuRIL (~1 GB)
+python -m nlp.train_embed               # encode the 772 training questions, fit + save models/intent_embed.json
+python -m nlp.evaluate                  # adds the encoder row + per-input-style accuracy table
+NLP_EMBEDDINGS=1 python -m nlp "mahila khiladiyon me sabse jyada catch kisne pakde"   # use it inside the pipeline
+```
+
+Another encoder: `NLP_EMBED_MODEL=sentence-transformers/LaBSE python -m nlp.train_embed`.
+Everything else works without torch; the classifier is skipped (with a hint) when it is not installed or not trained.
+With `NLP_EMBEDDINGS=1` the pipeline averages Naive Bayes and encoder probabilities in the fallback step
+(`intent_source = nb+encoder`); rules and the lexicon still decide first.
+
 ## Teaching it a new word
 Open `lexicon.py`, add the spelling to the right `forms` string, then run `python -m nlp.lint` and
 `python -m nlp.evaluate`. Spelling variants that *sound* the same do not need listing (the phonetic key merges

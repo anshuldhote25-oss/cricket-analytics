@@ -19,6 +19,7 @@ from .entities import extract_entities, resolve_numbers
 from .intent import INTENTS, NaiveBayesIntent, featurize, rule_intent
 from .normalize import tokenize
 from .dataset import generate
+from .embed_intent import EMBED_PATH, INSTALL_HINT, EmbeddingIntent, deps_available
 from .pipeline import analyze
 
 TEST_PATH = Path(__file__).parent / "data" / "intent_test.csv"
@@ -77,6 +78,20 @@ def main(show_errors: bool = False) -> None:
     slot_stats = defaultdict(lambda: [0, 0, 0])      # lang -> tp, fp, fn
     errors = []
 
+    # optional: pretrained multilingual encoder (MuRIL) + trained softmax head - only if trained on this machine
+    embed_pred, embed_note = None, ""
+    if EMBED_PATH.exists() and deps_available():
+        try:
+            clf = EmbeddingIntent.load()
+            embed_pred = [lab for lab, _ in clf.predict_many([r["text"] for r in data])]
+            embed_note = f"pretrained encoder {clf.encoder_name} (frozen) + softmax head, raw text in"
+        except Exception as e:                                       # e.g. model not downloadable offline
+            embed_note = f"embedding classifier skipped: {e}"
+    elif not EMBED_PATH.exists():
+        embed_note = "embedding classifier not trained - run: python -m nlp.train_embed   (" + INSTALL_HINT.splitlines()[1].strip() + ")"
+    else:
+        embed_note = "embedding classifier skipped - " + INSTALL_HINT.splitlines()[0]
+
     for r in data:
         frame = analyze(r["text"], model=model)
         gold_lang.append(r["lang"]); pred_lang.append(frame.language)
@@ -108,10 +123,14 @@ def main(show_errors: bool = False) -> None:
         print(f"{g:12} " + "".join(f"{cm[(g, p)]:>9}" for p in langs))
 
     # ---- intent
-    for name, pred in (("rule baseline (entities only)", rule_pred),
-                       ("Naive Bayes, text features only (no gazetteer)", text_pred),
-                       ("Naive Bayes, text + entity features", nb_pred),
-                       ("final pipeline (lexicon + NB + rules)", final_pred)):
+    print(f"\n[embedding classifier] {embed_note}")
+    systems = [("rule baseline (entities only)", rule_pred),
+               ("Naive Bayes, text features only (no gazetteer)", text_pred),
+               ("Naive Bayes, text + entity features", nb_pred)]
+    if embed_pred is not None:
+        systems.append(("pretrained multilingual encoder + softmax head (text only)", embed_pred))
+    systems.append(("final pipeline (lexicon + NB + rules)", final_pred))
+    for name, pred in systems:
         a, mf, rows, labels = intent_report(name, gold_int, pred)
         if name.startswith("final"):
             print(f"{'class':14}{'precision':>10}{'recall':>8}{'F1':>7}{'support':>9}")
@@ -124,6 +143,19 @@ def main(show_errors: bool = False) -> None:
             print(f"{'':14}" + "".join(f"{short[l]:>6}" for l in labs) + f"{'unk':>6}")
             for g in labs:
                 print(f"{g:14}" + "".join(f"{cmx[(g, p)]:>6}" for p in labs) + f"{cmx[(g, 'unknown')]:>6}")
+
+    # ---- accuracy per input style: trained-from-scratch vs pretrained encoder (text only, no gazetteer)
+    cols = [("NB text", text_pred), ("NB +ents", nb_pred)] + ([("encoder", embed_pred)] if embed_pred is not None else [])
+    print("\n=== Intent accuracy by input style (classifier alone, before rules/lexicon)")
+    print(f"{'input style':12}{'n':>4}" + "".join(f"{c:>10}" for c, _ in cols))
+    for l in langs:
+        ix = [i for i, g in enumerate(gold_lang) if g == l]
+        print(f"{l:12}{len(ix):>4}" + "".join(f"{sum(gold_int[i] == p[i] for i in ix) / len(ix):>10.1%}" for _, p in cols))
+    if embed_pred is not None:
+        wrong = [(r["text"], r["intent"], e) for r, e in zip(data, embed_pred) if r["intent"] != e]
+        print(f"\nencoder mistakes ({len(wrong)}):")
+        for t, g, e in wrong:
+            print(f"  gold={g:12} pred={e:12} {t}")
 
     # ---- slots
     print("\n=== Entity / slot extraction (exact-match sets)")
