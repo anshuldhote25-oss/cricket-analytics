@@ -61,3 +61,6 @@ logs/
 # Temp files
 .tmp/
 tmp/
+
+# cached MuRIL sentence vectors (rebuilt automatically)
+nlp/models/embed_cache_*.npz
